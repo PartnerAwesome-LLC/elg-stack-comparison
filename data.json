@@ -1,0 +1,246 @@
+{
+  "generated_at": "2026-07-03T12:41:00-04:00",
+  "vendors": [
+    {
+      "vendor_name": "Crossbeam",
+      "category": "Data escrow / account mapping",
+      "website": "https://www.crossbeam.com/",
+      "pricing_public": "yes",
+      "pricing_starting": "Free tier available (Explorer, 3 seats); paid plans from $4,800/yr",
+      "pricing_notes": "Four tiers: Free/Explorer (3 seats, $0), Connector ($4,800/yr, 1 seat included, additional Full Access seats $1,800/user/yr, Sales seats $40/user/mo), Supernode (custom, higher seat minimums), Enterprise (custom, 100K+ record exports). Crossbeam Sales Edge (formerly the standalone Partnered product) is an add-on available on Connector/Supernode tiers at incremental cost. Source: https://www.crossbeam.com/pricing and https://monday.com/blog/crm-and-sales/prm-software/",
+      "key_integrations": ["Salesforce", "HubSpot", "Microsoft Dynamics 365", "Gong", "Outreach", "Slack", "Snowflake", "Clay", "ChatGPT/Claude/Gemini (AI copilots)", "Impartner"],
+      "integration_count": "Not explicitly published; positioned as 'unlimited integrations' on Supernode/Enterprise tiers",
+      "ecosystem_size": "~30,000 companies/GTM teams on the combined network post-Reveal merger",
+      "last_funding_round": "Series C, $76M, October 26, 2021, led by Andreessen Horowitz",
+      "total_funding": "~$116.85M across 4 rounds",
+      "g2_rating": "4.8",
+      "g2_review_count": "405",
+      "recent_features": [
+        {"feature": "Deal Navigator & Performance Dashboard launched", "date": "2025-04-29", "source": "https://www.crossbeam.com/resources/product-updates"},
+        {"feature": "ELG (Ecosystem-Led Growth) Attribution deep-dive feature", "date": "2025-02-25", "source": "https://www.crossbeam.com/resources/product-updates"},
+        {"feature": "HubSpot Company object fields and multi-currency support added", "date": "2025-02-11", "source": "https://www.crossbeam.com/resources/product-updates"},
+        {"feature": "Crossbeam Copilot (AI assistant) rollout", "date": "2024-2025", "source": "https://help.crossbeam.com/en/articles/9167877-crossbeam-copilot-overview"},
+        {"feature": "All-stock merger with Reveal completed, forming combined ~30,000-company network", "date": "2024-06-25", "source": "https://tech.eu/2024/06/25/crossbeam-acquires-reveal-in-all-stock-transaction/"}
+      ],
+      "best_fit_icp": ["Ecosystem-first", "Mid-market SaaS", "Enterprise"],
+      "partnerawesome_take": "",
+      "sources": [
+        {"label": "Crossbeam pricing page", "url": "https://www.crossbeam.com/pricing"},
+        {"label": "Crossbeam G2 reviews", "url": "https://www.g2.com/products/crossbeam/reviews"},
+        {"label": "TechCrunch: Crossbeam $76M Series C", "url": "https://techcrunch.com/2021/10/26/crossbeam-lands-76m-series-c-as-network-effect-fuels-partner-cloud-growth/"},
+        {"label": "CB Insights: Crossbeam financials", "url": "https://www.cbinsights.com/company/crossbeam-1/financials"},
+        {"label": "Crossbeam product updates", "url": "https://www.crossbeam.com/resources/product-updates"},
+        {"label": "Philadelphia Business Journal: Crossbeam acquires Reveal", "url": "https://www.bizjournals.com/philadelphia/inno/stories/news/2024/06/25/crossbeam-philadelphia-acquires-reveal-paris.html"}
+      ]
+    },
+    {
+      "vendor_name": "Reveal",
+      "category": "Data escrow / account mapping",
+      "website": "https://reveal.co (platform and site decommissioned as of June 1, 2025; domain now redirects to Crossbeam messaging)",
+      "pricing_public": "N/A - product discontinued",
+      "pricing_starting": "Discontinued — platform fully sunset June 1, 2025 following merger into Crossbeam",
+      "pricing_notes": "Reveal was a standalone 'Collaborative Growth' / account-mapping platform (formerly 'Nearbound') founded in Paris. It merged with Crossbeam via an all-stock transaction announced June 24-25, 2024. All customers were migrated ('crossboarded') to Crossbeam, and the Reveal platform and website were fully decommissioned on June 1, 2025. Historical pricing (pre-merger) included a free account-mapping tier. Source: https://www.crossbeam.com/crossbeam-and-reveal-merger-announcement and https://intercom.help/Reveal4business/en/articles/10002528-crossboarding-faqs",
+      "key_integrations": ["Salesforce (pre-merger)", "HubSpot (pre-merger)", "Google Sheets (pre-merger)"],
+      "integration_count": "N/A - discontinued",
+      "ecosystem_size": "Historical: 5,000+ companies used Reveal at time of 2024 announcement; combined Crossbeam+Reveal network reached ~25,000-30,000 companies at merger",
+      "last_funding_round": "Series A, $50M, April 2022, led by Insight Partners (final round before acquisition)",
+      "total_funding": "$50M+ (pre-merger; company subsequently absorbed into Crossbeam, no independent valuation post-merger)",
+      "g2_rating": "N/A - discontinued; note the G2 listing 'Reveal (Platform)' at g2.com/products/reveal-platform is an unrelated eDiscovery/legal-tech product from a different company (Reveal Data Corporation), not the account-mapping Reveal — a naming collision that can confuse searchers",
+      "g2_review_count": "N/A - discontinued",
+      "recent_features": [
+        {"feature": "Reveal platform and website officially decommissioned; all users redirected to Crossbeam", "date": "2025-06-01", "source": "https://www.crossbeam.com/reveal-platform-sunset"},
+        {"feature": "Crossbeam-Reveal all-stock merger announced and closed", "date": "2024-06-24/25", "source": "https://tech.eu/2024/06/25/crossbeam-acquires-reveal-in-all-stock-transaction/"},
+        {"feature": "'Crossboarding' migration FAQ published for transitioning Reveal customers to Crossbeam", "date": "2024-2025", "source": "https://intercom.help/Reveal4business/en/articles/10002528-crossboarding-faqs"}
+      ],
+      "best_fit_icp": ["N/A - historical only, product discontinued"],
+      "partnerawesome_take": "",
+      "sources": [
+        {"label": "Crossbeam and Reveal merger announcement", "url": "https://www.crossbeam.com/crossbeam-and-reveal-merger-announcement"},
+        {"label": "Tech.eu: Crossbeam acquires Reveal in all-stock transaction", "url": "https://tech.eu/2024/06/25/crossbeam-acquires-reveal-in-all-stock-transaction/"},
+        {"label": "Philadelphia Business Journal: Crossbeam-Reveal merger", "url": "https://www.bizjournals.com/philadelphia/inno/stories/news/2024/06/25/crossbeam-philadelphia-acquires-reveal-paris.html"},
+        {"label": "Reveal platform sunset notice", "url": "https://www.crossbeam.com/reveal-platform-sunset"},
+        {"label": "Crossboarding FAQs (Reveal to Crossbeam migration)", "url": "https://intercom.help/Reveal4business/en/articles/10002528-crossboarding-faqs"},
+        {"label": "TechCrunch: Reveal raises $50M Series A", "url": "https://techcrunch.com/2022/04/27/2306524/"}
+      ]
+    },
+    {
+      "vendor_name": "PartnerStack",
+      "category": "Partner payments/marketplace",
+      "website": "https://partnerstack.com/",
+      "pricing_public": "no",
+      "pricing_starting": "Not disclosed publicly since ~2020 (historical 2019 pricing was $800/mo for SMB tier)",
+      "pricing_notes": "PartnerStack removed public pricing from its website around 2020 and now operates entirely on a 'contact sales / book a demo' model. Its own pricing page states 'Let us personalize a plan and pricing that suit your business.' Third-party benchmarking (Vendr) shows a median annual spend of $19,616/yr across 62 purchases, with a typical range of $9,186–$37,770/yr; Starter tier commonly runs $500-$1,500/mo, Growth tier $1,500-$4,000/mo, and Enterprise contracts $30,000-$100,000+/yr. PartnerStack also charges a percentage-based commission override fee (roughly 1.5%-15% depending on plan/volume) on partner payouts processed through the platform, on top of the base subscription. Sources: https://partnerstack.com/pricing, https://www.vendr.com/marketplace/partnerstack, https://affonso.io/blog/partnerstack-pricing-guide",
+      "key_integrations": ["Salesforce", "HubSpot", "Stripe", "Slack", "Zapier", "Segment", "Intercom", "Chargebee"],
+      "integration_count": "Not explicitly published",
+      "ecosystem_size": "80,000-100,000+ active partners claimed on the PartnerStack Marketplace; markets itself as facilitating $1B+ in partner-sourced revenue",
+      "last_funding_round": "Series B, $29M CAD/USD, May 26, 2021 (some sources cite $35M CAD)",
+      "total_funding": "~$38M (across Seed and Series A/B rounds)",
+      "g2_rating": "4.7",
+      "g2_review_count": "924",
+      "recent_features": [
+        {"feature": "PartnerStack AI Matches (AI-powered partner recruitment/matching)", "date": "2025-2026", "source": "https://partnerstack.com/pricing"},
+        {"feature": "MCP (Model Context Protocol) integration for AI agent workflows", "date": "2025-10/11", "source": "https://partnerstack.com/articles/series-b"},
+        {"feature": "Startup Program launched, lowering first-year entry cost for early-stage SaaS companies", "date": "2025-2026", "source": "https://affinco.com/partnerstack-review/"}
+      ],
+      "best_fit_icp": ["SMB SaaS", "Mid-market SaaS"],
+      "partnerawesome_take": "",
+      "sources": [
+        {"label": "PartnerStack pricing page", "url": "https://partnerstack.com/pricing"},
+        {"label": "PartnerStack G2 reviews", "url": "https://www.g2.com/products/partnerstack/reviews"},
+        {"label": "PR Newswire: PartnerStack $29M Series B", "url": "https://www.prnewswire.com/news-releases/partnerstack-the-leading-partnerships-platform-for-saas-closes-29-million-series-b-funding-round-301299828.html"},
+        {"label": "BetaKit: PartnerStack $35M CAD Series B", "url": "https://betakit.com/partnerstack-aims-to-capitalize-on-channel-sales-demand-with-35-million-cad-series-b-round/"},
+        {"label": "Vendr: PartnerStack pricing benchmarks", "url": "https://www.vendr.com/marketplace/partnerstack"},
+        {"label": "Affonso: PartnerStack pricing guide", "url": "https://affonso.io/blog/partnerstack-pricing-guide"}
+      ]
+    },
+    {
+      "vendor_name": "Impartner",
+      "category": "PRM (Partner Relationship Management)",
+      "website": "https://impartner.com/",
+      "pricing_public": "yes (tier names and starting list prices published via AWS Marketplace/HubSpot listing; full custom quotes require sales)",
+      "pricing_starting": "$25,000/year (Emerge tier)",
+      "pricing_notes": "Four tiers per Impartner's own site and AWS Marketplace listing: Emerge $25,000/yr, Ignite $45,000/yr, Pro $75,000/yr, Enterprise $150,000/yr (all list prices for up to 500 partner accounts with unlimited users, per AWS Marketplace). Real-world Vendr median across 73 purchases is ~$54,540/yr (17% average discount off list). Larger deployments with add-on modules (PRM+, LMS) commonly run $80,000-$200,000+/yr. Sources: https://aws.amazon.com/marketplace/pp/prodview-l75vriw7iffmw, https://ecosystem.hubspot.com/marketplace/listing/impartner-prm-223185, https://prospeo.io/s/zinfi-alternatives",
+      "key_integrations": ["Salesforce", "Microsoft Dynamics 365", "HubSpot", "Marketo", "Highspot"],
+      "integration_count": "Not explicitly published",
+      "ecosystem_size": "Not explicitly published (positions itself as serving 'millions of partners worldwide' across its customer base per TrustRadius profile)",
+      "last_funding_round": "$35M growth capital from CIBC Innovation Banking, May 2022",
+      "total_funding": "~$113-145M (includes $50M growth round led by Brighton Park Capital, October 2021, plus $35M CIBC growth capital, 2022)",
+      "g2_rating": "4.5",
+      "g2_review_count": "560",
+      "recent_features": [
+        {"feature": "Aimi AI engine launched across PRM platform", "date": "2025-12-11", "source": "https://impartner.com/request-prm-pricing/"},
+        {"feature": "Named a Leader in G2 Summer 2026 Enterprise Grid for Partner Relationship Management", "date": "2026-06-04", "source": "https://www.businesswire.com/news/home/20260604723274/en/Impartner-Recognized-as-a-Leader-in-G2-Summer-2026-Enterprise-Grid-for-Partner-Relationship-Management"},
+        {"feature": "HyperscalerGTM co-sell/marketplace offering expanded", "date": "2025-2026", "source": "https://impartner.com/impartner-g2-report/"},
+        {"feature": "PMaaS (Partner Management as a Service) positioning introduced", "date": "2025-2026", "source": "https://impartner.com/impartner-g2-report/"}
+      ],
+      "best_fit_icp": ["Enterprise", "Channel-heavy"],
+      "partnerawesome_take": "",
+      "sources": [
+        {"label": "Impartner PRM pricing (AWS Marketplace)", "url": "https://aws.amazon.com/marketplace/pp/prodview-l75vriw7iffmw"},
+        {"label": "Impartner PRM G2 reviews", "url": "https://www.g2.com/products/impartner-prm/reviews"},
+        {"label": "Brighton Park Capital: Impartner $50M raise", "url": "https://www.bpc.com/insights/impartner-raises-50m-to-accelerate-growth"},
+        {"label": "The SaaS News: Impartner raises $35M", "url": "https://www.thesaasnews.com/news/impartner-raises-35-million-in-funding/"},
+        {"label": "Business Wire: Impartner G2 Summer 2026 Leader", "url": "https://www.businesswire.com/news/home/20260604723274/en/Impartner-Recognized-as-a-Leader-in-G2-Summer-2026-Enterprise-Grid-for-Partner-Relationship-Management"},
+        {"label": "Impartner PRM request pricing page", "url": "https://impartner.com/request-prm-pricing/"}
+      ]
+    },
+    {
+      "vendor_name": "ZINFI",
+      "category": "PRM (Partner Relationship Management)",
+      "website": "https://www.zinfi.com/",
+      "pricing_public": "no",
+      "pricing_starting": "Not disclosed (all tiers require contacting sales); 30-day free trial available",
+      "pricing_notes": "ZINFI offers four unnamed/custom tiers (Basic, Starter, Professional, Enterprise per aggregator fitgap.com) with no published pricing anywhere — G2, Capterra, TrustRadius, and GetApp all list 'contact vendor.' Third-party market benchmarks estimate $300-$1,500/mo for small businesses (≤50 partners), $1,500-$5,000+/mo for mid-market (50-500 partners), and $5,000-$20,000+/mo for enterprise (500+ partners). A 30-day free trial with full platform access is offered. Sources: https://www.zinfi.com/blog/prm-software-pricing-guide/, https://prospeo.io/s/zinfi-pricing-reviews-pros-and-cons, https://www.capterra.com/p/10004590/ZINFIs-Partner-Relationship-Management/",
+      "key_integrations": ["Salesforce", "Microsoft Dynamics 365", "HubSpot", "Zoho CRM", "Stripe Connect", "Tipalti", "Marketo"],
+      "integration_count": "Extensive integration library across CRM, collaboration, LMS, and payment processing categories; exact count not publicly disclosed",
+      "ecosystem_size": "Not explicitly published; ~$23M annual revenue per ZoomInfo/Prospeo estimate",
+      "last_funding_round": "None - bootstrapped/self-funded (no venture capital raised)",
+      "total_funding": "$0 - ZINFI is fully bootstrapped, no VC funding on record (per PitchBook and Tracxn profiles)",
+      "g2_rating": "4.9",
+      "g2_review_count": "722",
+      "recent_features": [
+        {"feature": "AI-native Partner Co-Selling Management capability launched", "date": "2026-05", "source": "https://www.prnewswire.com/news-releases/g2-summer-2026-grid-report-names-zinfi-a-leader-in-partner-relationship-management-with-4-9-star-rating-highest-among-prm-leaders-302784020.html"},
+        {"feature": "Named Leader in G2 Summer 2026 PRM Grid with highest customer satisfaction score (4.9/5) among all PRM vendors", "date": "2026-05-28", "source": "https://www.prnewswire.com/news-releases/g2-summer-2026-grid-report-names-zinfi-a-leader-in-partner-relationship-management-with-4-9-star-rating-highest-among-prm-leaders-302784020.html"},
+        {"feature": "ZINFI.AI knowledge base/AI assistant launched", "date": "2026-03", "source": "https://www.prnewswire.com/news-releases/zinfi-technologies-once-again-named-a-leader-in-g2-grid-report-for-partner-relationship-management-prm-spring-2026-302722010.html"},
+        {"feature": "Named Leader in G2 Spring 2026 PRM Grid (consecutive quarter)", "date": "2026-03-25", "source": "https://www.prnewswire.com/news-releases/zinfi-technologies-once-again-named-a-leader-in-g2-grid-report-for-partner-relationship-management-prm-spring-2026-302722010.html"}
+      ],
+      "best_fit_icp": ["Enterprise", "Channel-heavy"],
+      "partnerawesome_take": "",
+      "sources": [
+        {"label": "ZINFI G2 Summer 2026 Leader announcement", "url": "https://www.prnewswire.com/news-releases/g2-summer-2026-grid-report-names-zinfi-a-leader-in-partner-relationship-management-with-4-9-star-rating-highest-among-prm-leaders-302784020.html"},
+        {"label": "ZINFI Unified Partner Management G2 reviews", "url": "https://www.g2.com/products/zinfi-unified-partner-management-upm/reviews"},
+        {"label": "ZINFI PRM software pricing guide (own blog)", "url": "https://www.zinfi.com/blog/prm-software-pricing-guide/"},
+        {"label": "ZINFI Spring 2026 G2 Leader press release", "url": "https://www.prnewswire.com/news-releases/zinfi-technologies-once-again-named-a-leader-in-g2-grid-report-for-partner-relationship-management-prm-spring-2026-302722010.html"},
+        {"label": "Prospeo: ZINFI pricing and reviews", "url": "https://prospeo.io/s/zinfi-pricing-reviews-pros-and-cons"}
+      ]
+    },
+    {
+      "vendor_name": "Allbound",
+      "category": "PRM (Partner Relationship Management)",
+      "website": "https://www.allbound.com/ (product now sold under parent brand Channelscaler, https://channelscaler.com/, following its 2025 merger with Channel Mechanics)",
+      "pricing_public": "no",
+      "pricing_starting": "Not disclosed (historical circa-2020 pricing was ~$995/mo base)",
+      "pricing_notes": "Allbound's G2 pricing page states 'has not provided pricing information for this product' — contact sales required. Company messaging emphasizes flat-rate pricing regardless of partner count ('what you see is what you get'). Historical (pre-2022) pricing was reported at $995/mo base with add-ons: Pipeline Manager add-on $595/mo, Marketing Center add-on $395/mo. Third-party estimates place current pricing around $1,500-$3,000+/mo for mid-market deployments. Source: https://www.g2.com/products/allbound-prm/pricing, https://start.askwonder.com/insights/prm-software-1-6r28693pv",
+      "key_integrations": ["Salesforce", "HubSpot", "Pipedrive", "Zoho CRM", "SugarCRM", "Microsoft Dynamics 365"],
+      "integration_count": "Not explicitly published",
+      "ecosystem_size": "Not explicitly published; claims customer acquisition increases of 55% and cost savings of 65% through partner-sourced business automation (marketing claim, not a partner-count figure)",
+      "last_funding_round": "$43M majority growth investment from Invictus Growth Partners, July 26, 2022",
+      "total_funding": "~$43M (Invictus Growth Partners round; prior funding history not separately disclosed)",
+      "g2_rating": "4.4 (listed under 'Channelscaler' on G2 following the 2025 Allbound/Channel Mechanics merger)",
+      "g2_review_count": "453",
+      "recent_features": [
+        {"feature": "Allbound and Channel Mechanics merged and rebranded under unified 'Channelscaler' brand", "date": "2025-05/06", "source": "https://channelscaler.com/resources/blog/allbound-and-channel-mechanics-now-channelscaler-join-forces-to-provide-industrys-most-comprehensive-prm-platform/"},
+        {"feature": "Channelscaler (combined entity) recognized as Leader in G2 Fall 2024/2025 Partner Management Software Grid", "date": "2025-07/08", "source": "https://channelscaler.com/resources/blog/channel-mechanics-and-allbound-now-channelscaler-soar-as-g2-leaders-in-fall-2024-report/"},
+        {"feature": "Combined platform positioned as 'industry's most comprehensive PRM platform' spanning incentive management (from Channel Mechanics) and core PRM (from Allbound)", "date": "2025-2026", "source": "https://channelscaler.com/about/"}
+      ],
+      "best_fit_icp": ["Mid-market SaaS", "Channel-heavy"],
+      "partnerawesome_take": "",
+      "sources": [
+        {"label": "Business Wire: Allbound raises $43M from Invictus Growth Partners", "url": "https://www.businesswire.com/news/home/20220725005961/en/Allbound-Inc.-Raises-$43-Million-from-Invictus-Growth-Partners"},
+        {"label": "Channelscaler (Allbound + Channel Mechanics merger announcement)", "url": "https://channelscaler.com/resources/blog/allbound-and-channel-mechanics-now-channelscaler-join-forces-to-provide-industrys-most-comprehensive-prm-platform/"},
+        {"label": "Channelscaler G2 reviews (formerly Allbound PRM listing)", "url": "https://www.g2.com/products/channelscaler/reviews"},
+        {"label": "Allbound PRM G2 pricing page", "url": "https://www.g2.com/products/allbound-prm/pricing"},
+        {"label": "Channelnomics: Channel Mechanics rebrands as Channelscaler", "url": "https://www.channelnomics.com/insights/channelmechanics-rebrands-as-channelscaler"}
+      ]
+    },
+    {
+      "vendor_name": "WorkSpan",
+      "category": "Co-sell orchestration",
+      "website": "https://www.workspan.com/",
+      "pricing_public": "no",
+      "pricing_starting": "Not disclosed (contact sales); Vendr reports median annual spend around $48,000/yr",
+      "pricing_notes": "WorkSpan pricing is fully custom/quote-based across its Starter, Pro, Premium, and Enterprise tiers (per AWS Marketplace and G2 listings, both stating 'pricing provided by WorkSpan' / 'contact us'). Vendr benchmarking data suggests a median annual contract value in the ~$48,000/yr range for mid-size deployments. Source: https://www.g2.com/compare/unifyr-one-vs-workspan, https://www.g2.com/products/workspan/reviews",
+      "key_integrations": ["AWS ACE (Partner Central)", "Microsoft Partner Center", "Salesforce", "HubSpot", "Microsoft Dynamics 365", "Zoho CRM", "Pipedrive", "SugarCRM"],
+      "integration_count": "Not explicitly published",
+      "ecosystem_size": "15,000+ companies claimed on the WorkSpan co-sell network (per company marketing materials)",
+      "last_funding_round": "Series C, $30M, October 5, 2022, led by Insight Partners with participation from Mayfield and M12 (Microsoft's venture fund)",
+      "total_funding": "$66M total (Insight Partners, Mayfield Fund, M12, Redline Capital Management)",
+      "g2_rating": "4.3",
+      "g2_review_count": "29",
+      "recent_features": [
+        {"feature": "WorkSpan AI launched to eliminate the 'partner complexity tax' in sales execution", "date": "2025-03-27", "source": "https://www.businesswire.com/news/home/20250327578659/en/WorkSpan-Launches-WorkSpan-AI-to-Eliminate-the-Partner-Complexity-Tax-in-Sales-Execution"},
+        {"feature": "AI Teammates for Partner Sales feature suite made generally available", "date": "2025-03", "source": "https://www.workspan.com/platform/ai-teammates"},
+        {"feature": "Generative AI co-sell agent launched on AWS AI Agent Marketplace", "date": "2025-07-17/18", "source": "https://www.workspan.com/blog/aws-agent-marketplace-launch"}
+      ],
+      "best_fit_icp": ["Enterprise", "Ecosystem-first"],
+      "partnerawesome_take": "",
+      "sources": [
+        {"label": "WorkSpan G2 reviews", "url": "https://www.g2.com/products/workspan/reviews"},
+        {"label": "WorkSpan blog: $30M Series C led by Insight Partners", "url": "https://www.workspan.com/blog/accelerating-the-decade-of-ecosystems-workspan-30-million-series-c-led-by-insight-ventures"},
+        {"label": "Business Insider: WorkSpan raises $30M Series C, $66M total", "url": "https://www.businessinsider.com/workspan-partner-network-selling-startup-30-million-series-c-2022-10"},
+        {"label": "Business Wire: WorkSpan AI launch", "url": "https://www.businesswire.com/news/home/20250327578659/en/WorkSpan-Launches-WorkSpan-AI-to-Eliminate-the-Partner-Complexity-Tax-in-Sales-Execution"},
+        {"label": "WorkSpan AWS Agent Marketplace launch", "url": "https://www.workspan.com/blog/aws-agent-marketplace-launch"}
+      ]
+    },
+    {
+      "vendor_name": "Partnered",
+      "category": "Co-sell orchestration",
+      "website": "N/A - product discontinued as standalone; functionality now sold as 'Crossbeam Sales Edge' at https://www.crossbeam.com/",
+      "pricing_public": "N/A - product discontinued",
+      "pricing_starting": "Discontinued as standalone product; now sold as 'Crossbeam Sales Edge' add-on, available on Crossbeam's Connector or Supernode tiers at incremental cost",
+      "pricing_notes": "Partnered (originally 'Sponsorfied,' a Y Combinator S12 company founded 2010/2012, based in Hoboken, NJ) was acquired by Crossbeam on May 18, 2022. The team and product were fully integrated into Crossbeam by fall 2022, relaunched as 'Crossbeam Sales Edge' at the Connector Summit on November 7, 2022. No standalone pricing exists today. Source: https://insider.crossbeam.com/entry/partnered-crossbeam-acquired and https://www.linkedin.com/posts/adamjmichalski_excited-to-announce-that-crossbeam-has-acquired-activity-6932780728082468865-mmxh",
+      "key_integrations": ["Salesforce (pre-acquisition)", "Now fully merged into Crossbeam's integration stack"],
+      "integration_count": "N/A - discontinued",
+      "ecosystem_size": "N/A - discontinued; at acquisition, Crossbeam's network stood at 8,500+ companies",
+      "last_funding_round": "Seed, ~$850K, July 2014 (as 'Partnered'); company originally raised early seed capital as 'Sponsorfied' circa 2012",
+      "total_funding": "~$1.1M total (Y Combinator, Comcast Ventures, Rothenberg Ventures, Kima Ventures, and others) per CB Insights — a very small, early-stage raise relative to category peers",
+      "g2_rating": "Not available / product discontinued — G2's 'Partnered' listing is stale (last substantive content dated 2021) and does not reflect current status or a confirmed star rating",
+      "g2_review_count": "Not available / product discontinued",
+      "recent_features": [
+        {"feature": "Acquired by Crossbeam", "date": "2022-05-18", "source": "https://insider.crossbeam.com/entry/partnered-crossbeam-acquired"},
+        {"feature": "Relaunched as 'Crossbeam Sales Edge,' giving sales reps direct access to partner-sourced intel and warm intro requests from account dashboards", "date": "2022-11-07", "source": "https://www.youtube.com/watch?v=q9Nsul-_mdA"},
+        {"feature": "Partnered founder Adam Michalski became VP of Ecosystem at Crossbeam, continuing to lead the Sales Edge product line", "date": "2022-2024", "source": "https://pulse2.com/crossbeam-adam-michalski-profile/"}
+      ],
+      "best_fit_icp": ["N/A - historical only, product discontinued"],
+      "partnerawesome_take": "",
+      "sources": [
+        {"label": "Crossbeam Insider: Crossbeam has acquired Partnered", "url": "https://insider.crossbeam.com/entry/partnered-crossbeam-acquired"},
+        {"label": "Adam Michalski LinkedIn announcement", "url": "https://www.linkedin.com/posts/adamjmichalski_excited-to-announce-that-crossbeam-has-acquired-activity-6932780728082468865-mmxh"},
+        {"label": "CB Insights: Partnered company profile and funding", "url": "https://www.cbinsights.com/company/partnered"},
+        {"label": "Pulse 2.0: Crossbeam/Adam Michalski profile", "url": "https://pulse2.com/crossbeam-adam-michalski-profile/"},
+        {"label": "Connector Summit 2022: Crossbeam Sales Edge launch", "url": "https://www.youtube.com/watch?v=q9Nsul-_mdA"},
+        {"label": "TechCrunch: Partnered raises $850K seed (2014)", "url": "https://techcrunch.com/2014/07/01/partnered-raises-850k-in-fresh-seed-funding-to-pair-big-brands-with-startups/"}
+      ]
+    }
+  ]
+}

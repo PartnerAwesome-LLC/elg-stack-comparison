@@ -1,0 +1,856 @@
+<style>
+.pa-elg-comparison-embed *, .pa-elg-comparison-embed *::before, .pa-elg-comparison-embed *::after{ box-sizing: border-box; margin: 0; padding: 0; }.pa-elg-comparison-embed{
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --text-xs: clamp(0.6875rem, 0.65rem + 0.2vw, 0.8125rem);
+  --text-sm: clamp(0.8125rem, 0.78rem + 0.15vw, 0.875rem);
+  --text-base: clamp(0.875rem, 0.85rem + 0.12vw, 0.9375rem);
+  --text-lg: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --text-xl: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);
+  --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem;
+  --space-4: 1rem; --space-5: 1.25rem; --space-6: 1.5rem;
+  --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem;
+  --radius-sm: 0.375rem; --radius-md: 0.5rem; --radius-lg: 0.75rem;
+  --transition: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}.pa-elg-comparison-embed[data-theme="dark"], .pa-elg-comparison-embed [data-theme="dark"]{
+  --bg: #0c0d10;
+  --surface: #14151a;
+  --surface-2: #1a1b22;
+  --surface-3: #22232c;
+  --border: #2a2b36;
+  --border-subtle: #1e1f28;
+  --text: #e2e4ea;
+  --text-muted: #888a96;
+  --text-faint: #555760;
+  --accent-openai: #10a37f;
+  --accent-openai-bg: rgba(16, 163, 127, 0.08);
+  --accent-anthropic: #d4a574;
+  --accent-anthropic-bg: rgba(212, 165, 116, 0.08);
+  --accent-google: #4285f4;
+  --accent-google-bg: rgba(66, 133, 244, 0.08);
+  --badge-new: #22c55e;
+  --badge-change: #f59e0b;
+  --badge-deprecation: #ef4444;
+  --badge-new-bg: rgba(34, 197, 94, 0.1);
+  --badge-change-bg: rgba(245, 158, 11, 0.1);
+  --badge-deprecation-bg: rgba(239, 68, 68, 0.1);
+  --shadow: 0 2px 8px rgba(0,0,0,0.3);
+}.pa-elg-comparison-embed[data-theme="light"], .pa-elg-comparison-embed [data-theme="light"]{
+  --bg: #f5f6f8;
+  --surface: #ffffff;
+  --surface-2: #f0f1f4;
+  --surface-3: #e8e9ee;
+  --border: #d4d6de;
+  --border-subtle: #e8e9ee;
+  --text: #1a1c24;
+  --text-muted: #6b6e7a;
+  --text-faint: #9a9ca8;
+  --accent-openai: #0d8c6d;
+  --accent-openai-bg: rgba(13, 140, 109, 0.06);
+  --accent-anthropic: #b88a54;
+  --accent-anthropic-bg: rgba(184, 138, 84, 0.06);
+  --accent-google: #3570d4;
+  --accent-google-bg: rgba(53, 112, 212, 0.06);
+  --badge-new: #16a34a;
+  --badge-change: #d97706;
+  --badge-deprecation: #dc2626;
+  --badge-new-bg: rgba(22, 163, 74, 0.08);
+  --badge-change-bg: rgba(217, 119, 6, 0.08);
+  --badge-deprecation-bg: rgba(220, 38, 38, 0.08);
+  --shadow: 0 2px 8px rgba(0,0,0,0.06);
+}.pa-elg-comparison-embed{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}.pa-elg-comparison-embed{
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.55;
+  min-height: 100dvh;
+}.pa-elg-comparison-embed /* ---- Layout ---- */
+.dashboard{
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-4);
+}.pa-elg-comparison-embed .header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}.pa-elg-comparison-embed .brand{
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text-muted);
+}.pa-elg-comparison-embed .header h1{
+  font-size: var(--text-xl);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}.pa-elg-comparison-embed .dashboard-intro{
+  margin-bottom: var(--space-8);
+}.pa-elg-comparison-embed .dashboard-intro .subtitle{
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  margin-top: var(--space-2);
+  max-width: 820px;
+  line-height: 1.6;
+}.pa-elg-comparison-embed .header-meta{
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}.pa-elg-comparison-embed .last-updated{
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}.pa-elg-comparison-embed .theme-toggle{
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  padding: var(--space-1) var(--space-2);
+  cursor: pointer;
+  font-size: var(--text-sm);
+  transition: all var(--transition);
+}.pa-elg-comparison-embed .theme-toggle:hover{ color: var(--text); border-color: var(--text-muted); }.pa-elg-comparison-embed /* ---- Model Overview Grid ---- */
+.model-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}@media (max-width: 860px) {.pa-elg-comparison-embed .model-grid{ grid-template-columns: 1fr; }
+}.pa-elg-comparison-embed .model-card{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  position: relative;
+  overflow: hidden;
+  transition: border-color var(--transition);
+  display: flex;
+  flex-direction: column;
+}.pa-elg-comparison-embed .model-card:hover{ border-color: var(--text-faint); }.pa-elg-comparison-embed .model-card::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--accent-elg);
+}.pa-elg-comparison-embed .model-card.absorbed::before{ background: var(--badge-deprecation); }.pa-elg-comparison-embed .model-card.absorbed{ opacity: 0.82; background: var(--surface-2); }.pa-elg-comparison-embed .model-card .provider{
+  font-size: var(--text-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--space-1);
+  color: var(--accent-elg);
+}.pa-elg-comparison-embed .model-card .model-name{
+  font-size: var(--text-lg);
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}.pa-elg-comparison-embed .model-card .release-date{
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  margin-bottom: var(--space-4);
+}.pa-elg-comparison-embed .pill-row{
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}.pa-elg-comparison-embed .pill{
+  font-size: var(--text-xs);
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--surface-3);
+  color: var(--text-muted);
+  border: 1px solid var(--border-subtle);
+}.pa-elg-comparison-embed .absorbed-badge{
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: var(--badge-deprecation-bg);
+  color: var(--badge-deprecation);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}.pa-elg-comparison-embed .absorbed-note{
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  font-style: italic;
+  margin-bottom: var(--space-4);
+  line-height: 1.6;
+  border-left: 2px solid var(--badge-deprecation-bg);
+  padding-left: var(--space-3);
+}.pa-elg-comparison-embed .spec-row{
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-2) 0;
+  border-top: 1px solid var(--border-subtle);
+  font-size: var(--text-sm);
+  gap: var(--space-3);
+}.pa-elg-comparison-embed .spec-row:last-of-type{ border-bottom: 1px solid var(--border-subtle); }.pa-elg-comparison-embed .spec-label{ color: var(--text-muted); }.pa-elg-comparison-embed .spec-value{ font-weight: 600; font-family: var(--font-mono); font-size: var(--text-xs); text-align: right; }.pa-elg-comparison-embed .editor-take{
+  font-size: var(--text-sm);
+  color: var(--text-faint);
+  font-style: italic;
+  margin-top: var(--space-4);
+  line-height: 1.5;
+}.pa-elg-comparison-embed .program-link{
+  display: inline-block;
+  margin-top: var(--space-4);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--accent-elg);
+  text-decoration: none;
+}.pa-elg-comparison-embed .program-link:hover{ text-decoration: underline; }.pa-elg-comparison-embed .program-link.disabled{
+  color: var(--text-faint);
+  pointer-events: none;
+}.pa-elg-comparison-embed /* ---- Comparison Table ---- */
+.section-title{
+  font-size: var(--text-lg);
+  font-weight: 700;
+  margin-bottom: var(--space-4);
+  letter-spacing: -0.01em;
+}.pa-elg-comparison-embed .section-subtitle{
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  margin-bottom: var(--space-5);
+  max-width: 840px;
+  line-height: 1.6;
+}.pa-elg-comparison-embed .comparison-wrapper{
+  overflow-x: auto;
+  margin-bottom: var(--space-8);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+}.pa-elg-comparison-embed .comparison-table{
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+  min-width: 1180px;
+}.pa-elg-comparison-embed .comparison-table th{
+  text-align: left;
+  padding: var(--space-3) var(--space-4);
+  font-weight: 600;
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+}.pa-elg-comparison-embed .comparison-table td{
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--border-subtle);
+  vertical-align: top;
+}.pa-elg-comparison-embed .comparison-table tr:last-child td{ border-bottom: none; }.pa-elg-comparison-embed .comparison-table tr.absorbed-row td{ color: var(--text-faint); background: var(--surface-2); }.pa-elg-comparison-embed .comparison-table tr.absorbed-row td:first-child{ color: var(--text-muted); }.pa-elg-comparison-embed .comparison-table td:first-child{
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+  position: sticky;
+  left: 0;
+  background: var(--surface);
+}.pa-elg-comparison-embed .comparison-table tr.absorbed-row td:first-child{ background: var(--surface-2); }.pa-elg-comparison-embed .comparison-table .mono{
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+}.pa-elg-comparison-embed .comparison-table .highlight{
+  font-weight: 600;
+  color: var(--text);
+}.pa-elg-comparison-embed .g2-count{
+  display: block;
+  font-size: var(--text-xs);
+  color: var(--text-faint);
+  margin-top: 2px;
+}.pa-elg-comparison-embed .na-value{
+  color: var(--text-faint);
+  cursor: help;
+  border-bottom: 1px dotted var(--text-faint);
+}.pa-elg-comparison-embed /* ---- Deep dive ---- */
+.deep-dive-section{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  margin-bottom: var(--space-6);
+}.pa-elg-comparison-embed .deep-dive-section.absorbed{
+  background: var(--surface-2);
+  border-color: rgba(239, 68, 68, 0.25);
+}.pa-elg-comparison-embed .deep-dive-section h2{
+  font-size: var(--text-xl);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-1);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}.pa-elg-comparison-embed .deep-dive-section .program-name{
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  margin-bottom: var(--space-4);
+}.pa-elg-comparison-embed .deep-dive-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3) var(--space-6);
+  margin-bottom: var(--space-4);
+}@media (max-width: 760px) {.pa-elg-comparison-embed .deep-dive-grid{ grid-template-columns: 1fr; }
+}.pa-elg-comparison-embed .dd-row{
+  padding: var(--space-2) 0;
+  border-top: 1px solid var(--border-subtle);
+  font-size: var(--text-sm);
+}.pa-elg-comparison-embed .dd-row .dd-label{
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: block;
+  margin-bottom: 2px;
+}.pa-elg-comparison-embed .dd-row .dd-value{ line-height: 1.5; }.pa-elg-comparison-embed .dd-row .dd-value a{ color: var(--accent-elg); }.pa-elg-comparison-embed .mini-timeline{
+  margin: var(--space-4) 0;
+  padding-left: 0;
+  list-style: none;
+}.pa-elg-comparison-embed .mini-timeline li{
+  display: flex;
+  gap: var(--space-3);
+  padding: var(--space-2) 0;
+  border-top: 1px solid var(--border-subtle);
+  font-size: var(--text-sm);
+  align-items: baseline;
+}.pa-elg-comparison-embed .mini-timeline .tl-date{
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-faint);
+  white-space: nowrap;
+  min-width: 90px;
+}.pa-elg-comparison-embed .mini-timeline .tl-body a{ color: var(--accent-elg); font-size: var(--text-xs); }.pa-elg-comparison-embed .sources-footer{
+  margin-top: var(--space-4);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border-subtle);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  line-height: 1.8;
+}.pa-elg-comparison-embed .sources-footer a{ color: var(--accent-elg); text-decoration: none; }.pa-elg-comparison-embed .sources-footer a:hover{ text-decoration: underline; }.pa-elg-comparison-embed /* ---- Insights ---- */
+.insight-block{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  margin-bottom: var(--space-5);
+}.pa-elg-comparison-embed .insight-block h3{
+  font-size: var(--text-lg);
+  font-weight: 700;
+  margin-bottom: var(--space-3);
+  letter-spacing: -0.01em;
+  color: var(--text);
+}.pa-elg-comparison-embed .insight-block p{
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: var(--space-3);
+}.pa-elg-comparison-embed .insight-block p a{ color: var(--accent-elg); }.pa-elg-comparison-embed .insight-block .why-matters{
+  font-style: italic;
+  color: var(--text-faint);
+  font-size: var(--text-sm);
+  margin-bottom: 0;
+}.pa-elg-comparison-embed .editor-callout{
+  background: var(--badge-deprecation-bg);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  margin-bottom: var(--space-6);
+  font-size: var(--text-sm);
+  line-height: 1.7;
+  color: var(--text);
+}.pa-elg-comparison-embed .editor-callout strong{ color: var(--badge-deprecation); }.pa-elg-comparison-embed /* ---- Changelog ---- */
+.changelog{
+  margin-bottom: var(--space-8);
+}.pa-elg-comparison-embed .changelog-entry{
+  display: flex;
+  gap: var(--space-4);
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--border-subtle);
+  align-items: flex-start;
+}.pa-elg-comparison-embed .changelog-entry:last-child{ border-bottom: none; }.pa-elg-comparison-embed .changelog-date{
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-faint);
+  white-space: nowrap;
+  min-width: 90px;
+  padding-top: 2px;
+}.pa-elg-comparison-embed .changelog-content{
+  flex: 1;
+}.pa-elg-comparison-embed .changelog-content .title{
+  font-weight: 600;
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-1);
+}.pa-elg-comparison-embed .changelog-content .detail{
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  line-height: 1.6;
+}.pa-elg-comparison-embed .badge{
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-right: var(--space-2);
+  vertical-align: middle;
+}.pa-elg-comparison-embed .badge.new{ background: var(--badge-new-bg); color: var(--badge-new); }.pa-elg-comparison-embed .badge.change{ background: var(--badge-change-bg); color: var(--badge-change); }.pa-elg-comparison-embed .badge.deprecation{ background: var(--badge-deprecation-bg); color: var(--badge-deprecation); }.pa-elg-comparison-embed /* ---- Footer ---- */
+footer{
+  text-align: center;
+  padding: var(--space-8) 0 var(--space-4);
+  border-top: 1px solid var(--border-subtle);
+}.pa-elg-comparison-embed footer a{
+  color: var(--text-faint);
+  text-decoration: none;
+  font-size: var(--text-xs);
+  transition: color var(--transition);
+}.pa-elg-comparison-embed footer a:hover{ color: var(--text-muted); }.pa-elg-comparison-embed /* ---- Tab nav ---- */
+.tab-nav{
+  display: flex;
+  gap: var(--space-1);
+  margin-bottom: var(--space-6);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0;
+  overflow-x: auto;
+}.pa-elg-comparison-embed .tab-btn{
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--text-muted);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition);
+  white-space: nowrap;
+}.pa-elg-comparison-embed .tab-btn:hover{ color: var(--text); }.pa-elg-comparison-embed .tab-btn.active{
+  color: var(--text);
+  border-bottom-color: var(--text);
+}.pa-elg-comparison-embed .tab-panel{ display: none; }.pa-elg-comparison-embed .tab-panel.active{ display: block; }.pa-elg-comparison-embed[data-theme="dark"], .pa-elg-comparison-embed [data-theme="dark"]{ --accent-elg: #4fd1c5; --accent-elg-bg: rgba(79, 209, 197, 0.08); }.pa-elg-comparison-embed[data-theme="light"], .pa-elg-comparison-embed [data-theme="light"]{ --accent-elg: #0e8074; --accent-elg-bg: rgba(14, 128, 116, 0.06); }
+
+</style>
+<div class="pa-elg-comparison-embed" data-theme="dark">
+
+<!-- Dashboard: ELG Tech Stack Comparison. Data: /home/user/workspace/dashboards-2026-07/research/elg.json. Generated: 2026-07-03T16:56:37.034705. Vendors: 8. -->
+<div class="dashboard">
+<!-- Header -->
+<div class="header">
+<span class="brand">PartnerAwesome</span>
+<div class="header-meta">
+<span class="last-updated" id="lastUpdated">Updated: July 3, 2026</span>
+<button aria-label="Switch theme" class="theme-toggle" data-theme-toggle="">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>
+</button>
+</div>
+</div>
+<div class="dashboard-intro">
+<h1>ELG Tech Stack Comparison</h1>
+<p class="subtitle">Live comparison of pricing, integrations, funding, and AI features across the top ecosystem-led-growth platforms &mdash; refreshed twice weekly.</p>
+</div>
+<!-- Tab Navigation -->
+<nav class="tab-nav">
+<button class="tab-btn active" data-tab="overview">Overview</button>
+<button class="tab-btn" data-tab="comparison">Comparison</button>
+<button class="tab-btn" data-tab="deep-dive">Deep Dive</button>
+<button class="tab-btn" data-tab="insights">Insights</button>
+<button class="tab-btn" data-tab="changelog">Changelog</button>
+</nav>
+<!-- Tab: Overview -->
+<div class="tab-panel active" id="tab-overview">
+<div class="model-grid">
+<div class="model-card">
+<div class="provider">Data escrow</div>
+<div class="model-name">Crossbeam</div>
+<div class="pill-row"><span class="pill">Data escrow / account mapping</span><span class="pill">Ecosystem-first</span><span class="pill">Mid-market SaaS</span><span class="pill">Public pricing</span></div>
+
+<div class="spec-row"><span class="spec-label">Category</span><span class="spec-value">Data escrow / account mapping</span></div>
+<div class="spec-row"><span class="spec-label">Starting price</span><span class="spec-value">Free tier available (Explorer, 3 seats); paid plans from $4,800/yr</span></div>
+<div class="spec-row"><span class="spec-label">Last funding round</span><span class="spec-value">Series C, $76M, October 26, 2021, led by Andreessen Horowitz</span></div>
+<div class="spec-row"><span class="spec-label">G2 rating</span><span class="spec-value">4.8<span class="g2-count"> (405 reviews)</span></span></div>
+<p class="editor-take"><em>Editor's note pending &mdash; Jason's take will appear here.</em></p>
+<a class="program-link" href="https://www.crossbeam.com/" target="_blank" rel="noopener">View partner program &rarr;</a>
+</div>
+<div class="model-card absorbed">
+<div class="provider">Data escrow</div>
+<div class="model-name">Reveal <span class="absorbed-badge">Absorbed by Crossbeam (June 2025)</span></div>
+<div class="pill-row"><span class="pill">Data escrow / account mapping</span></div>
+<p class="absorbed-note">Formerly a standalone data escrow / account-mapping product; now available exclusively as part of Crossbeam. Included for historical/comparison context. The platform and website were fully decommissioned on <a href="https://www.crossbeam.com/reveal-platform-sunset" target="_blank" rel="noopener">June 1, 2025</a>, with all customers migrated to Crossbeam following the <a href="https://tech.eu/2024/06/25/crossbeam-acquires-reveal-in-all-stock-transaction/" target="_blank" rel="noopener">all-stock merger announced June 24-25, 2024</a>.</p>
+<div class="spec-row"><span class="spec-label">Category</span><span class="spec-value">Data escrow / account mapping</span></div>
+<div class="spec-row"><span class="spec-label">Starting price</span><span class="spec-value">Discontinued — platform fully sunset June 1, 2025 following merger into Crossbeam</span></div>
+<div class="spec-row"><span class="spec-label">Last funding round</span><span class="spec-value">Series A, $50M, April 2022, led by Insight Partners (final round before acquisition)</span></div>
+<div class="spec-row"><span class="spec-label">G2 rating</span><span class="spec-value"><span class="na-value" title="No current G2 rating available">&mdash;</span> <span style="color:var(--text-muted);">discontinued; note the G2 listing 'Reveal (Platform)' at g2.com/products/reveal-platform is an unrelated eDiscovery/legal-tech product from a different company (Reveal Data Corporation), not the account-mapping Reveal — a naming collision that can confuse searchers</span></span></div>
+<p class="editor-take"><em>Editor's note pending &mdash; Jason's take will appear here.</em></p>
+<a class="program-link" href="https://www.crossbeam.com/reveal-platform-sunset" target="_blank" rel="noopener">View sunset notice &amp; migration FAQ &rarr;</a>
+</div>
+<div class="model-card">
+<div class="provider">Partner payments/marketplace</div>
+<div class="model-name">PartnerStack</div>
+<div class="pill-row"><span class="pill">Partner payments/marketplace</span><span class="pill">SMB SaaS</span><span class="pill">Mid-market SaaS</span><span class="pill">Contact sales</span></div>
+
+<div class="spec-row"><span class="spec-label">Category</span><span class="spec-value">Partner payments/marketplace</span></div>
+<div class="spec-row"><span class="spec-label">Starting price</span><span class="spec-value">Contact sales</span></div>
+<div class="spec-row"><span class="spec-label">Last funding round</span><span class="spec-value">Series B, $29M CAD/USD, May 26, 2021 (some sources cite $35M CAD)</span></div>
+<div class="spec-row"><span class="spec-label">G2 rating</span><span class="spec-value">4.7<span class="g2-count"> (924 reviews)</span></span></div>
+<p class="editor-take"><em>Editor's note pending &mdash; Jason's take will appear here.</em></p>
+<a class="program-link" href="https://partnerstack.com/" target="_blank" rel="noopener">View partner program &rarr;</a>
+</div>
+<div class="model-card">
+<div class="provider">PRM</div>
+<div class="model-name">Impartner</div>
+<div class="pill-row"><span class="pill">PRM (Partner Relationship Management)</span><span class="pill">Enterprise</span><span class="pill">Channel-heavy</span><span class="pill">Public pricing</span></div>
+
+<div class="spec-row"><span class="spec-label">Category</span><span class="spec-value">PRM (Partner Relationship Management)</span></div>
+<div class="spec-row"><span class="spec-label">Starting price</span><span class="spec-value">$25,000/year (Emerge tier)</span></div>
+<div class="spec-row"><span class="spec-label">Last funding round</span><span class="spec-value">$35M growth capital from CIBC Innovation Banking, May 2022</span></div>
+<div class="spec-row"><span class="spec-label">G2 rating</span><span class="spec-value">4.5<span class="g2-count"> (560 reviews)</span></span></div>
+<p class="editor-take"><em>Editor's note pending &mdash; Jason's take will appear here.</em></p>
+<a class="program-link" href="https://impartner.com/" target="_blank" rel="noopener">View partner program &rarr;</a>
+</div>
+<div class="model-card">
+<div class="provider">PRM</div>
+<div class="model-name">ZINFI</div>
+<div class="pill-row"><span class="pill">PRM (Partner Relationship Management)</span><span class="pill">Enterprise</span><span class="pill">Channel-heavy</span><span class="pill">Contact sales</span></div>
+
+<div class="spec-row"><span class="spec-label">Category</span><span class="spec-value">PRM (Partner Relationship Management)</span></div>
+<div class="spec-row"><span class="spec-label">Starting price</span><span class="spec-value">Contact sales</span></div>
+<div class="spec-row"><span class="spec-label">Last funding round</span><span class="spec-value">None - bootstrapped/self-funded (no venture capital raised)</span></div>
+<div class="spec-row"><span class="spec-label">G2 rating</span><span class="spec-value">4.9<span class="g2-count"> (722 reviews)</span></span></div>
+<p class="editor-take"><em>Editor's note pending &mdash; Jason's take will appear here.</em></p>
+<a class="program-link" href="https://www.zinfi.com/" target="_blank" rel="noopener">View partner program &rarr;</a>
+</div>
+<div class="model-card">
+<div class="provider">PRM</div>
+<div class="model-name">Allbound</div>
+<div class="pill-row"><span class="pill">PRM (Partner Relationship Management)</span><span class="pill">Mid-market SaaS</span><span class="pill">Channel-heavy</span><span class="pill">Contact sales</span></div>
+
+<div class="spec-row"><span class="spec-label">Category</span><span class="spec-value">PRM (Partner Relationship Management)</span></div>
+<div class="spec-row"><span class="spec-label">Starting price</span><span class="spec-value">Contact sales</span></div>
+<div class="spec-row"><span class="spec-label">Last funding round</span><span class="spec-value">$43M majority growth investment from Invictus Growth Partners, July 26, 2022</span></div>
+<div class="spec-row"><span class="spec-label">G2 rating</span><span class="spec-value">4.4<span class="g2-count"> (453 reviews)</span></span></div>
+<p class="editor-take"><em>Editor's note pending &mdash; Jason's take will appear here.</em></p>
+<a class="program-link" href="https://channelscaler.com/" target="_blank" rel="noopener">View partner program (now Channelscaler) &rarr;</a>
+</div>
+<div class="model-card">
+<div class="provider">Co-sell orchestration</div>
+<div class="model-name">WorkSpan</div>
+<div class="pill-row"><span class="pill">Co-sell orchestration</span><span class="pill">Enterprise</span><span class="pill">Ecosystem-first</span><span class="pill">Contact sales</span></div>
+
+<div class="spec-row"><span class="spec-label">Category</span><span class="spec-value">Co-sell orchestration</span></div>
+<div class="spec-row"><span class="spec-label">Starting price</span><span class="spec-value">Contact sales</span></div>
+<div class="spec-row"><span class="spec-label">Last funding round</span><span class="spec-value">Series C, $30M, October 5, 2022, led by Insight Partners with participation from Mayfield and M12 (Microsoft's venture fund)</span></div>
+<div class="spec-row"><span class="spec-label">G2 rating</span><span class="spec-value">4.3<span class="g2-count"> (29 reviews)</span></span></div>
+<p class="editor-take"><em>Editor's note pending &mdash; Jason's take will appear here.</em></p>
+<a class="program-link" href="https://www.workspan.com/" target="_blank" rel="noopener">View partner program &rarr;</a>
+</div>
+<div class="model-card absorbed">
+<div class="provider">Co-sell orchestration</div>
+<div class="model-name">Partnered <span class="absorbed-badge">Absorbed by Crossbeam Sales Edge (May 2022)</span></div>
+<div class="pill-row"><span class="pill">Co-sell orchestration</span></div>
+<p class="absorbed-note">Formerly a standalone co-sell orchestration product; now available exclusively as part of Crossbeam. Included for historical/comparison context. Crossbeam <a href="https://insider.crossbeam.com/entry/partnered-crossbeam-acquired" target="_blank" rel="noopener">acquired Partnered on May 18, 2022</a> and relaunched it as "Crossbeam Sales Edge" at the Connector Summit that November.</p>
+<div class="spec-row"><span class="spec-label">Category</span><span class="spec-value">Co-sell orchestration</span></div>
+<div class="spec-row"><span class="spec-label">Starting price</span><span class="spec-value">Discontinued as standalone product; now sold as 'Crossbeam Sales Edge' add-on, available on Crossbeam's Connector or Supernode tiers at incremental cost</span></div>
+<div class="spec-row"><span class="spec-label">Last funding round</span><span class="spec-value">Seed, ~$850K, July 2014 (as 'Partnered'); company originally raised early seed capital as 'Sponsorfied' circa 2012</span></div>
+<div class="spec-row"><span class="spec-label">G2 rating</span><span class="spec-value"><span class="na-value" title="No current G2 rating available">&mdash;</span> <span style="color:var(--text-muted);">G2's 'Partnered' listing is stale (last substantive content dated 2021) and does not reflect current status or a confirmed star rating</span></span></div>
+<p class="editor-take"><em>Editor's note pending &mdash; Jason's take will appear here.</em></p>
+<a class="program-link" href="https://insider.crossbeam.com/entry/partnered-crossbeam-acquired" target="_blank" rel="noopener">View acquisition announcement &rarr;</a>
+</div>
+</div>
+</div>
+<!-- Tab: Comparison -->
+<div class="tab-panel" id="tab-comparison">
+<h2 class="section-title">Side-by-Side Comparison</h2>
+<p class="section-subtitle">All 8 vendors originally scoped for this comparison, including Reveal and Partnered &mdash; both now absorbed into Crossbeam and shown here in muted rows for historical reference. Every fact below is sourced inline; use "&mdash;" values as an indicator of undisclosed data, not zero.</p>
+<div class="comparison-wrapper">
+<table class="comparison-table">
+<thead>
+<tr>
+<th>Vendor</th>
+<th>Category</th>
+<th>Public pricing</th>
+<th>Starting price</th>
+<th>Integration count</th>
+<th>Ecosystem size</th>
+<th>Last funding round</th>
+<th>Total funding</th>
+<th>G2 rating</th>
+<th>Best-fit ICP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Crossbeam</td>
+<td>Data escrow / account mapping</td>
+<td>Yes</td>
+<td>Free tier available (Explorer, 3 seats); paid plans from $4,800/yr</td>
+<td>10+ named<span class="g2-count">(no total published)</span></td>
+<td>~30,000 companies/GTM teams on the combined network post-Reveal merger</td>
+<td>Series C, $76M, October 26, 2021, led by Andreessen Horowitz</td>
+<td>~$116.85M across 4 rounds</td>
+<td>4.8<span class="g2-count">405 reviews</span></td>
+<td>Ecosystem-first, Mid-market SaaS, Enterprise</td>
+</tr>
+<tr class="absorbed-row">
+<td>Reveal<br><span class="absorbed-badge" style="margin-top:4px;">Absorbed by Crossbeam (2025)</span></td>
+<td>Data escrow / account mapping</td>
+<td><span class="na-value" title="Discontinued product; no longer applicable">&mdash;</span> <span style="color:var(--text-muted);">product discontinued</span></td>
+<td>Discontinued — platform fully sunset June 1, 2025 following merger into Crossbeam</td>
+<td>3+ named<span class="g2-count">(no total published)</span></td>
+<td>Historical: 5,000+ companies used Reveal at time of 2024 announcement; combined Crossbeam+Reveal network reached ~25,000-30,000 companies at merger</td>
+<td>Series A, $50M, April 2022, led by Insight Partners (final round before acquisition)</td>
+<td>$50M+ (pre-merger; company subsequently absorbed into Crossbeam, no independent valuation post-merger)</td>
+<td><span class="na-value" title="No current G2 rating available">&mdash;</span> <span style="color:var(--text-muted);">discontinued; note the G2 listing 'Reveal (Platform)' at g2.com/products/reveal-platform is an unrelated eDiscovery/legal-tech product from a different company (Reveal Data Corporation), not the account-mapping Reveal — a naming collision that can confuse searchers</span></td>
+<td><span class="na-value" title="Historical only, product discontinued">&mdash;</span></td>
+</tr>
+<tr>
+<td>PartnerStack</td>
+<td>Partner payments/marketplace</td>
+<td>No</td>
+<td><span class="na-value" title="Not publicly disclosed">&mdash;</span></td>
+<td>8+ named<span class="g2-count">(no total published)</span></td>
+<td>80,000-100,000+ active partners claimed on the PartnerStack Marketplace; markets itself as facilitating $1B+ in partner-sourced revenue</td>
+<td>Series B, $29M CAD/USD, May 26, 2021 (some sources cite $35M CAD)</td>
+<td>~$38M (across Seed and Series A/B rounds)</td>
+<td>4.7<span class="g2-count">924 reviews</span></td>
+<td>SMB SaaS, Mid-market SaaS</td>
+</tr>
+<tr>
+<td>Impartner</td>
+<td>PRM (Partner Relationship Management)</td>
+<td>Yes</td>
+<td>$25,000/year (Emerge tier)</td>
+<td>5+ named<span class="g2-count">(no total published)</span></td>
+<td><span class="na-value" title="Not publicly disclosed">&mdash;</span></td>
+<td>$35M growth capital from CIBC Innovation Banking, May 2022</td>
+<td>~$113-145M (includes $50M growth round led by Brighton Park Capital, October 2021, plus $35M CIBC growth capital, 2022)</td>
+<td>4.5<span class="g2-count">560 reviews</span></td>
+<td>Enterprise, Channel-heavy</td>
+</tr>
+<tr>
+<td>ZINFI</td>
+<td>PRM (Partner Relationship Management)</td>
+<td>No</td>
+<td><span class="na-value" title="Not publicly disclosed">&mdash;</span> <span style="color:var(--text-muted);">30-day free trial available</span></td>
+<td>Extensive integration library across CRM, collaboration, LMS, and payment processing categories; exact count not publicly disclosed</td>
+<td><span class="na-value" title="Not publicly disclosed">&mdash;</span> <span style="color:var(--text-muted);">~$23M annual revenue per ZoomInfo/Prospeo estimate</span></td>
+<td>None - bootstrapped/self-funded (no venture capital raised)</td>
+<td>$0 - ZINFI is fully bootstrapped, no VC funding on record (per PitchBook and Tracxn profiles)</td>
+<td>4.9<span class="g2-count">722 reviews</span></td>
+<td>Enterprise, Channel-heavy</td>
+</tr>
+<tr>
+<td>Allbound</td>
+<td>PRM (Partner Relationship Management)</td>
+<td>No</td>
+<td><span class="na-value" title="Not publicly disclosed">&mdash;</span></td>
+<td>6+ named<span class="g2-count">(no total published)</span></td>
+<td><span class="na-value" title="Not publicly disclosed">&mdash;</span> <span style="color:var(--text-muted);">claims customer acquisition increases of 55% and cost savings of 65% through partner-sourced business automation (marketing claim, not a partner-count figure)</span></td>
+<td>$43M majority growth investment from Invictus Growth Partners, July 26, 2022</td>
+<td>~$43M (Invictus Growth Partners round; prior funding history not separately disclosed)</td>
+<td>4.4 (listed under 'Channelscaler' on G2 following the 2025 Allbound/Channel Mechanics merger)<span class="g2-count">453 reviews</span></td>
+<td>Mid-market SaaS, Channel-heavy</td>
+</tr>
+<tr>
+<td>WorkSpan</td>
+<td>Co-sell orchestration</td>
+<td>No</td>
+<td><span class="na-value" title="Not publicly disclosed">&mdash;</span> <span style="color:var(--text-muted);">Vendr reports median annual spend around $48,000/yr</span></td>
+<td>8+ named<span class="g2-count">(no total published)</span></td>
+<td>15,000+ companies claimed on the WorkSpan co-sell network (per company marketing materials)</td>
+<td>Series C, $30M, October 5, 2022, led by Insight Partners with participation from Mayfield and M12 (Microsoft's venture fund)</td>
+<td>$66M total (Insight Partners, Mayfield Fund, M12, Redline Capital Management)</td>
+<td>4.3<span class="g2-count">29 reviews</span></td>
+<td>Enterprise, Ecosystem-first</td>
+</tr>
+<tr class="absorbed-row">
+<td>Partnered<br><span class="absorbed-badge" style="margin-top:4px;">Absorbed by Crossbeam (2022)</span></td>
+<td>Co-sell orchestration</td>
+<td><span class="na-value" title="Discontinued product; no longer applicable">&mdash;</span> <span style="color:var(--text-muted);">product discontinued</span></td>
+<td>Discontinued as standalone product; now sold as 'Crossbeam Sales Edge' add-on, available on Crossbeam's Connector or Supernode tiers at incremental cost</td>
+<td>2+ named<span class="g2-count">(no total published)</span></td>
+<td><span class="na-value" title="Not publicly disclosed">&mdash;</span> <span style="color:var(--text-muted);">discontinued; at acquisition, Crossbeam's network stood at 8,500+ companies</span></td>
+<td>Seed, ~$850K, July 2014 (as 'Partnered'); company originally raised early seed capital as 'Sponsorfied' circa 2012</td>
+<td>~$1.1M total (Y Combinator, Comcast Ventures, Rothenberg Ventures, Kima Ventures, and others) per CB Insights — a very small, early-stage raise relative to category peers</td>
+<td><span class="na-value" title="No current G2 rating available">&mdash;</span> <span style="color:var(--text-muted);">G2's 'Partnered' listing is stale (last substantive content dated 2021) and does not reflect current status or a confirmed star rating</span></td>
+<td><span class="na-value" title="Historical only, product discontinued">&mdash;</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Tab: Deep Dive -->
+<div class="tab-panel" id="tab-deep-dive">
+<h2 class="section-title">Vendor Deep Dives</h2>
+<p class="section-subtitle">Full field-by-field detail for all 8 vendors researched, including Reveal and Partnered &mdash; now historical entries following their absorption into Crossbeam.</p>
+<section class="deep-dive-section">
+<h2>Crossbeam </h2>
+<div class="program-name">Data escrow / account mapping</div>
+
+<div class="deep-dive-grid"><div class="dd-row"><span class="dd-label">Website</span><span class="dd-value">https://www.crossbeam.com/</span></div><div class="dd-row"><span class="dd-label">Public pricing</span><span class="dd-value">yes</span></div><div class="dd-row"><span class="dd-label">Starting price</span><span class="dd-value">Free tier available (Explorer, 3 seats); paid plans from $4,800/yr</span></div><div class="dd-row"><span class="dd-label">Pricing notes</span><span class="dd-value">Four tiers: Free/Explorer (3 seats, $0), Connector ($4,800/yr, 1 seat included, additional Full Access seats $1,800/user/yr, Sales seats $40/user/mo), Supernode (custom, higher seat minimums), Enterprise (custom, 100K+ record exports). Crossbeam Sales Edge (formerly the standalone Partnered product) is an add-on available on Connector/Supernode tiers at incremental cost. Source: https://www.crossbeam.com/pricing and https://monday.com/blog/crm-and-sales/prm-software/</span></div><div class="dd-row"><span class="dd-label">Key integrations</span><span class="dd-value">Salesforce, HubSpot, Microsoft Dynamics 365, Gong, Outreach, Slack, Snowflake, Clay, ChatGPT/Claude/Gemini (AI copilots), Impartner</span></div><div class="dd-row"><span class="dd-label">Integration count</span><span class="dd-value">Not explicitly published; positioned as 'unlimited integrations' on Supernode/Enterprise tiers</span></div><div class="dd-row"><span class="dd-label">Ecosystem size</span><span class="dd-value">~30,000 companies/GTM teams on the combined network post-Reveal merger</span></div><div class="dd-row"><span class="dd-label">Last funding round</span><span class="dd-value">Series C, $76M, October 26, 2021, led by Andreessen Horowitz</span></div><div class="dd-row"><span class="dd-label">Total funding</span><span class="dd-value">~$116.85M across 4 rounds</span></div><div class="dd-row"><span class="dd-label">G2 rating</span><span class="dd-value">4.8</span></div><div class="dd-row"><span class="dd-label">G2 review count</span><span class="dd-value">405</span></div><div class="dd-row"><span class="dd-label">Best-fit ICP</span><span class="dd-value">Ecosystem-first, Mid-market SaaS, Enterprise</span></div></div>
+<h3 style="font-size:var(--text-base);font-weight:700;margin-bottom:var(--space-2);">Recent changes</h3><ul class="mini-timeline"><li><span class="tl-date">2025-04-29</span><span class="tl-body">Deal Navigator &amp; Performance Dashboard launched &mdash; <a href="https://www.crossbeam.com/resources/product-updates" target="_blank" rel="noopener">source</a></span></li><li><span class="tl-date">2025-02-25</span><span class="tl-body">ELG (Ecosystem-Led Growth) Attribution deep-dive feature &mdash; <a href="https://www.crossbeam.com/resources/product-updates" target="_blank" rel="noopener">source</a></span></li><li><span class="tl-date">2025-02-11</span><span class="tl-body">HubSpot Company object fields and multi-currency support added &mdash; <a href="https://www.crossbeam.com/resources/product-updates" target="_blank" rel="noopener">source</a></span></li><li><span class="tl-date">2024-2025</span><span class="tl-body">Crossbeam Copilot (AI assistant) rollout &mdash; <a href="https://help.crossbeam.com/en/articles/9167877-crossbeam-copilot-overview" target="_blank" rel="noopener">source</a></span></li><li><span class="tl-date">2024-06-25</span><span class="tl-body">All-stock merger with Reveal completed, forming combined ~30,000-company network &mdash; <a href="https://tech.eu/2024/06/25/crossbeam-acquires-reveal-in-all-stock-transaction/" target="_blank" rel="noopener">source</a></span></li></ul>
+<div class="sources-footer">Sources: <a href="https://www.crossbeam.com/pricing" target="_blank" rel="noopener">Crossbeam pricing page</a>, <a href="https://www.g2.com/products/crossbeam/reviews" target="_blank" rel="noopener">Crossbeam G2 reviews</a>, <a href="https://techcrunch.com/2021/10/26/crossbeam-lands-76m-series-c-as-network-effect-fuels-partner-cloud-growth/" target="_blank" rel="noopener">TechCrunch: Crossbeam $76M Series C</a>, <a href="https://www.cbinsights.com/company/crossbeam-1/financials" target="_blank" rel="noopener">CB Insights: Crossbeam financials</a>, <a href="https://www.crossbeam.com/resources/product-updates" target="_blank" rel="noopener">Crossbeam product updates</a>, <a href="https://www.bizjournals.com/philadelphia/inno/stories/news/2024/06/25/crossbeam-philadelphia-acquires-reveal-paris.html" target="_blank" rel="noopener">Philadelphia Business Journal: Crossbeam acquires Reveal</a></div>
+</section>
+<section class="deep-dive-section absorbed">
+<h2>Reveal <span class="absorbed-badge">Absorbed by Crossbeam (June 2025)</span></h2>
+<div class="program-name">Data escrow / account mapping</div>
+<p style="font-size:var(--text-sm);color:var(--text-muted);font-style:italic;margin-bottom:var(--space-4);line-height:1.6;">Formerly a standalone data escrow / account-mapping product; now available exclusively as part of Crossbeam. Included for historical/comparison context.</p>
+<div class="deep-dive-grid"><div class="dd-row"><span class="dd-label">Website</span><span class="dd-value">https://reveal.co (platform and site decommissioned as of June 1, 2025; domain now redirects to Crossbeam messaging)</span></div><div class="dd-row"><span class="dd-label">Public pricing</span><span class="dd-value">N/A - product discontinued</span></div><div class="dd-row"><span class="dd-label">Starting price</span><span class="dd-value">Discontinued — platform fully sunset June 1, 2025 following merger into Crossbeam</span></div><div class="dd-row"><span class="dd-label">Pricing notes</span><span class="dd-value">Reveal was a standalone 'Collaborative Growth' / account-mapping platform (formerly 'Nearbound') founded in Paris. It merged with Crossbeam via an all-stock transaction announced June 24-25, 2024. All customers were migrated ('crossboarded') to Crossbeam, and the Reveal platform and website were fully decommissioned on June 1, 2025. Historical pricing (pre-merger) included a free account-mapping tier. Source: https://www.crossbeam.com/crossbeam-and-reveal-merger-announcement and https://intercom.help/Reveal4business/en/articles/10002528-crossboarding-faqs</span></div><div class="dd-row"><span class="dd-label">Key integrations</span><span class="dd-value">Salesforce (pre-merger), HubSpot (pre-merger), Google Sheets (pre-merger)</span></div><div class="dd-row"><span class="dd-label">Integration count</span><span class="dd-value">N/A - discontinued</span></div><div class="dd-row"><span class="dd-label">Ecosystem size</span><span class="dd-value">Historical: 5,000+ companies used Reveal at time of 2024 announcement; combined Crossbeam+Reveal network reached ~25,000-30,000 companies at merger</span></div><div class="dd-row"><span class="dd-label">Last funding round</span><span class="dd-value">Series A, $50M, April 2022, led by Insight Partners (final round before acquisition)</span></div><div class="dd-row"><span class="dd-label">Total funding</span><span class="dd-value">$50M+ (pre-merger; company subsequently absorbed into Crossbeam, no independent valuation post-merger)</span></div><div class="dd-row"><span class="dd-label">G2 rating</span><span class="dd-value">N/A - discontinued; note the G2 listing 'Reveal (Platform)' at g2.com/products/reveal-platform is an unrelated eDiscovery/legal-tech product from a different company (Reveal Data Corporation), not the account-mapping Reveal — a naming collision that can confuse searchers</span></div><div class="dd-row"><span class="dd-label">G2 review count</span><span class="dd-value">N/A - discontinued</span></div><div class="dd-row"><span class="dd-label">Best-fit ICP</span><span class="dd-value">N/A - historical only, product discontinued</span></div></div>
+<h3 style="font-size:var(--text-base);font-weight:700;margin-bottom:var(--space-2);">Recent changes</h3><ul class="mini-timeline"><li><span class="tl-date">2025-06-01</span><span class="tl-body">Reveal platform and website officially decommissioned; all users redirected to Crossbeam &mdash; <a href="https://www.crossbeam.com/reveal-platform-sunset" target="_blank" rel="noopener">source</a></span></li><li><span class="tl-date">2024-06-24/25</span><span class="tl-body">Crossbeam-Reveal all-stock merger announced and closed &mdash; <a href="https://tech.eu/2024/06/25/crossbeam-acquires-reveal-in-all-stock-transaction/" target="_blank" rel="noopener">source</a></span></li><li><span class="tl-date">2024-2025</span><span class="tl-body">'Crossboarding' migration FAQ published for transitioning Reveal customers to Crossbeam &mdash; <a href="https://intercom.help/Reveal4business/en/articles/10002528-crossboarding-faqs" target="_blank" rel="noopener">source</a></span></li></ul>
+<div class="sources-footer">Sources: <a href="https://www.crossbeam.com/crossbeam-and-reveal-merger-announcement" target="_blank" rel="noopener">Crossbeam and Reveal merger announcement</a>, <a href="https://tech.eu/2024/06/25/crossbeam-acquires-reveal-in-all-stock-transaction/" target="_blank" rel="noopener">Tech.eu: Crossbeam acquires Reveal in all-stock transaction</a>, <a href="https://www.bizjournals.com/philadelphia/inno/stories/news/2024/06/25/crossbeam-philadelphia-acquires-reveal-paris.html" target="_blank" rel="noopener">Philadelphia Business Journal: Crossbeam-Reveal merger</a>, <a href="https://www.crossbeam.com/reveal-platform-sunset" target="_blank" rel="noopener">Reveal platform sunset notice</a>, <a href="https://intercom.help/Reveal4business/en/articles/10002528-crossboarding-faqs" target="_blank" rel="noopener">Crossboarding FAQs (Reveal to Crossbeam migration)</a>, <a href="https://techcrunch.com/2022/04/27/2306524/" target="_blank" rel="noopener">TechCrunch: Reveal raises $50M Series A</a></div>
+</section>
+<section class="deep-dive-section">
+<h2>PartnerStack </h2>
+<div class="program-name">Partner payments/marketplace</div>
+
+<div class="deep-dive-grid"><div class="dd-row"><span class="dd-label">Website</span><span class="dd-value">https://partnerstack.com/</span></div><div class="dd-row"><span class="dd-label">Public pricing</span><span class="dd-value">no</span></div><div class="dd-row"><span class="dd-label">Starting price</span><span class="dd-value">Not disclosed publicly since ~2020 (historical 2019 pricing was $800/mo for SMB tier)</span></div><div class="dd-row"><span class="dd-label">Pricing notes</span><span class="dd-value">PartnerStack removed public pricing from its website around 2020 and now operates entirely on a 'contact sales / book a demo' model. Its own pricing page states 'Let us personalize a plan and pricing that suit your business.' Third-party benchmarking (Vendr) shows a median annual spend of $19,616/yr across 62 purchases, with a typical range of $9,186–$37,770/yr; Starter tier commonly runs $500-$1,500/mo, Growth tier $1,500-$4,000/mo, and Enterprise contracts $30,000-$100,000+/yr. PartnerStack also charges a percentage-based commission override fee (roughly 1.5%-15% depending on plan/volume) on partner payouts processed through the platform, on top of the base subscription. Sources: https://partnerstack.com/pricing, https://www.vendr.com/marketplace/partnerstack, https://affonso.io/blog/partnerstack-pricing-guide</span></div><div class="dd-row"><span class="dd-label">Key integrations</span><span class="dd-value">Salesforce, HubSpot, Stripe, Slack, Zapier, Segment, Intercom, Chargebee</span></div><div class="dd-row"><span class="dd-label">Integration count</span><span class="dd-value">Not explicitly published</span></div><div class="dd-row"><span class="dd-label">Ecosystem size</span><span class="dd-value">80,000-100,000+ active partners claimed on the PartnerStack Marketplace; markets itself as facilitating $1B+ in partner-sourced revenue</span></div><div class="dd-row"><span class="dd-label">Last funding round</span><span class="dd-value">Series B, $29M CAD/USD, May 26, 2021 (some sources cite $35M CAD)</span></div><div class="dd-row"><span class="dd-label">Total funding</span><span class="dd-value">~$38M (across Seed and Series A/B rounds)</span></div><div class="dd-row"><span class="dd-label">G2 rating</span><span class="dd-value">4.7</span></div><div class="dd-row"><span class="dd-label">G2 review count</span><span class="dd-value">924</span></div><div class="dd-row"><span class="dd-label">Best-fit ICP</span><span class="dd-value">SMB SaaS, Mid-market SaaS</span></div></div>
+<h3 style="font-size:var(--text-base);font-weight:700;margin-bottom:var(--space-2);">Recent changes</h3><ul class="mini-timeline"><li><span class="tl-date">2025-2026</span><span class="tl-body">PartnerStack AI Matches (AI-powered partner recruitment/matching) &mdash; <a href="https://partnerstack.com/pricing" target="_blank" rel="noopener">source</a></span></li><li><span class="tl-date">2025-10/11</span><span class="tl-body">MCP (Model Context Protocol) integration for AI agent workflows &mdash; <a href="https://partnerstack.com/articles/series-b" target="_blank" rel="noopener">source</a></span></li><li><span class="tl-date">2025-2026</span><span class="tl-body">Startup Program launched, lowering first-year entry cost for early-stage SaaS companies &mdash; <a href="https://affinco.com/partnerstack-review/" target="_blank" rel="noopener">source</a></span></li></ul>
+<div class="sources-footer">Sources: <a href="https://partnerstack.com/pricing" target="_blank" rel="noopener">PartnerStack pricing page</a>, <a href="https://www.g2.com/products/partnerstack/reviews" target="_blank" rel="noopener">PartnerStack G2 reviews</a>, <a href="https://www.prnewswire.com/news-releases/partnerstack-the-leading-partnerships-platform-for-saas-closes-29-million-series-b-funding-round-301299828.html" target="_blank" rel="noopener">PR Newswire: PartnerStack $29M Series B</a>, <a href="https://betakit.com/partnerstack-aims-to-capitalize-on-channel-sales-demand-with-35-million-cad-series-b-round/" target="_blank" rel="noopener">BetaKit: PartnerStack $35M CAD Series B</a>, <a href="https://www.vendr.com/marketplace/partnerstack" target="_blank" rel="noopener">Vendr: PartnerStack pricing benchmarks</a>, <a href="https://affonso.io/blog/partnerstack-pricing-guide" target="_blank" rel="noopener">Affonso: PartnerStack pricing guide</a></div>
+</section>
+<section class="deep-dive-section">
+<h2>Impartner </h2>
+<div class="program-name">PRM (Partner Relationship Management)</div>
+
+<div class="deep-dive-grid"><div class="dd-row"><span class="dd-label">Website</span><span class="dd-value">https://impartner.com/</span></div><div class="dd-row"><span class="dd-label">Public pricing</span><span class="dd-value">yes (tier names and starting list prices published via AWS Marketplace/HubSpot listing; full custom quotes require sales)</span></div><div class="dd-row"><span class="dd-label">Starting price</span><span class="dd-value">$25,000/year (Emerge tier)</span></div><div class="dd-row"><span class="dd-label">Pricing notes</span><span class="dd-value">Four tiers per Impartner's own site and AWS Marketplace listing: Emerge $25,000/yr, Ignite $45,000/yr, Pro $75,000/yr, Enterprise $150,000/yr (all list prices for up to 500 partner accounts with unlimited users, per AWS Marketplace). Real-world Vendr median across 73 purchases is ~$54,540/yr (17% average discount off list). Larger deployments with add-on modules (PRM+, LMS) commonly run $80,000-$200,000+/yr. Sources: https://aws.amazon.com/marketplace/pp/prodview-l75vriw7iffmw, https://ecosystem.hubspot.com/marketplace/listing/impartner-prm-223185, https://prospeo.io/s/zinfi-alternatives</span></div><div class="dd-row"><span class="dd-label">Key integrations</span><span class="dd-value">Salesforce, Microsoft Dynamics 365, HubSpot, Marketo, Highspot</span></div><div class="dd-row"><span class="dd-label">Integration count</span><span class="dd-value">Not explicitly published</span></div><div class="dd-row"><span class="dd-label">Ecosystem size</span><span class="dd-value">Not explicitly published (positions itself as serving 'millions of partners worldwide' across its customer base per TrustRadius profile)</span></div><div class="dd-row"><span class="dd-label">Last funding round</span><span class="dd-value">$35M growth capital from CIBC Innovation Banking, May 2022</span></div><div class="dd-row"><span class="dd-label">Total funding</span><span class="dd-value">~$113-145M (includes $50M growth round led by Brighton Park Capital, October 2021, plus $35M CIBC growth capital, 2022)</span></div><div class="dd-row"><span class="dd-label">G2 rating</span><span class="dd-value">4.5</span></div><div class="dd-row"><span class="dd-label">G2 review count</span><span class="dd-value">560</span></div><div class="dd-row"><span class="dd-label">Best-fit ICP</span><span class="dd-value">Enterprise, Channel-heavy</span></div></div>
+<h3 style="font-size:var(--text-base);font-weight:700;margin-bottom:var(--space-2);">Recent changes</h3><ul class="mini-timeline"><li><span class="tl-date">2025-12-11</span><span class="tl-body">Aimi AI engine launched across PRM platform &mdash; <a href="https://impartner.com/request-prm-pricing/" target="_blank" rel="noopener">source</a></span></li><li><span class="tl-date">2026-06-04</span><span class="tl-body">Named a Leader in G2 Summer 2026 Enterprise Grid for Partner Relationship Management &mdash; <a href="https://www.businesswire.com/news/home/20260604723274/en/Impartner-Recognized-as-a-Leader-in-G2-Summer-2026-Enterprise-Grid-for-Partner-Relationship-Management" target="_blank" rel="noopener">source</a></span></li><li><span class="tl-date">2025-2026</span><span class="tl-body">HyperscalerGTM co-sell/marketplace offering expanded &mdash; <a href="https://impartner.com/impartner-g2-report/" target="_blank" rel="noopener">source</a></span></li><li><span class="tl-date">2025-2026</span><span class="tl-body">PMaaS (Partner Management as a Service) positioning introduced &mdash; <a href="https://impartner.com/impartner-g2-report/" target="_blank" rel="noopener">source</a></span></li></ul>
+<div class="sources-footer">Sources: <a href="https://aws.amazon.com/marketplace/pp/prodview-l75vriw7iffmw" target="_blank" rel="noopener">Impartner PRM pricing (AWS Marketplace)</a>, <a href="https://www.g2.com/products/impartner-prm/reviews" target="_blank" rel="noopener">Impartner PRM G2 reviews</a>, <a href="https://www.bpc.com/insights/impartner-raises-50m-to-accelerate-growth" target="_blank" rel="noopener">Brighton Park Capital: Impartner $50M raise</a>, <a href="https://www.thesaasnews.com/news/impartner-raises-35-million-in-funding/" target="_blank" rel="noopener">The SaaS News: Impartner raises $35M</a>, <a href="https://www.businesswire.com/news/home/20260604723274/en/Impartner-Recognized-as-a-Leader-in-G2-Summer-2026-Enterprise-Grid-for-Partner-Relationship-Management" target="_blank" rel="noopener">Business Wire: Impartner G2 Summer 2026 Leader</a>, <a href="https://impartner.com/request-prm-pricing/" target="_blank" rel="noopener">Impartner PRM request pricing page</a></div>
+</section>
+<section class="deep-dive-section">
+<h2>ZINFI </h2>
+<div class="program-name">PRM (Partner Relationship Management)</div>
+
+<div class="deep-dive-grid"><div class="dd-row"><span class="dd-label">Website</span><span class="dd-value">https://www.zinfi.com/</span></div><div class="dd-row"><span class="dd-label">Public pricing</span><span class="dd-value">no</span></div><div class="dd-row"><span class="dd-label">Starting price</span><span class="dd-value">Not disclosed (all tiers require contacting sales); 30-day free trial available</span></div><div class="dd-row"><span class="dd-label">Pricing notes</span><span class="dd-value">ZINFI offers four unnamed/custom tiers (Basic, Starter, Professional, Enterprise per aggregator fitgap.com) with no published pricing anywhere — G2, Capterra, TrustRadius, and GetApp all list 'contact vendor.' Third-party market benchmarks estimate $300-$1,500/mo for small businesses (≤50 partners), $1,500-$5,000+/mo for mid-market (50-500 partners), and $5,000-$20,000+/mo for enterprise (500+ partners). A 30-day free trial with full platform access is offered. Sources: https://www.zinfi.com/blog/prm-software-pricing-guide/, https://prospeo.io/s/zinfi-pricing-reviews-pros-and-cons, https://www.capterra.com/p/10004590/ZINFIs-Partner-Relationship-Management/</span></div><div class="dd-row"><span class="dd-label">Key integrations</span><span class="dd-value">Salesforce, Microsoft Dynamics 365, HubSpot, Zoho CRM, Stripe Connect, Tipalti, Marketo</span></div><div class="dd-row"><span class="dd-label">Integration count</span><span class="dd-value">Extensive integration library across CRM, collaboration, LMS, and payment processing categories; exact count not publicly disclosed</span></div><div class="dd-row"><span class="dd-label">Ecosystem size</span><span class="dd-value">Not explicitly published; ~$23M annual revenue per ZoomInfo/Prospeo estimate</span></div><div class="dd-row"><span class="dd-label">Last funding round</span><span class="dd-value">None - bootstrapped/self-funded (no venture capital raised)</span></div><div class="dd-row"><span class="dd-label">Total funding</span><span class="dd-value">$0 - ZINFI is fully bootstrapped, no VC funding on record (per PitchBook and Tracxn profiles)</span></div><div class="dd-row"><span class="dd-label">G2 rating</span><span class="dd-value">4.9</span></div><div class="dd-row"><span class="dd-label">G2 review count</span><span class="dd-value">722</span></div><div class="dd-row"><span class="dd-label">Best-fit ICP</span><span class="dd-value">Enterprise, Channel-heavy</span></div></div>
+<h3 style="font-size:var(--text-base);font-weight:700;margin-bottom:var(--space-2);">Recent changes</h3><ul class="mini-timeline"><li><span class="tl-date">2026-05</span><span class="tl-body">AI-native Partner Co-Selling Management capability launched &mdash; <a href="https://www.prnewswire.com/news-releases/g2-summer-2026-grid-report-names-zinfi-a-leader-in-partner-relationship-management-with-4-9-star-rating-highest-among-prm-leaders-302784020.html" target="_blank" rel="noopener">source</a></span></li><li><span class="tl-date">2026-05-28</span><span class="tl-body">Named Leader in G2 Summer 2026 PRM Grid with highest customer satisfaction score (4.9/5) among all PRM vendors &mdash; <a href="https://www.prnewswire.com/news-releases/g2-summer-2026-grid-report-names-zinfi-a-leader-in-partner-relationship-management-with-4-9-star-rating-highest-among-prm-leaders-302784020.html" target="_blank" rel="noopener">source</a></span></li><li><span class="tl-date">2026-03</span><span class="tl-body">ZINFI.AI knowledge base/AI assistant launched &mdash; <a href="https://www.prnewswire.com/news-releases/zinfi-technologies-once-again-named-a-leader-in-g2-grid-report-for-partner-relationship-management-prm-spring-2026-302722010.html" target="_blank" rel="noopener">source</a></span></li><li><span class="tl-date">2026-03-25</span><span class="tl-body">Named Leader in G2 Spring 2026 PRM Grid (consecutive quarter) &mdash; <a href="https://www.prnewswire.com/news-releases/zinfi-technologies-once-again-named-a-leader-in-g2-grid-report-for-partner-relationship-management-prm-spring-2026-302722010.html" target="_blank" rel="noopener">source</a></span></li></ul>
+<div class="sources-footer">Sources: <a href="https://www.prnewswire.com/news-releases/g2-summer-2026-grid-report-names-zinfi-a-leader-in-partner-relationship-management-with-4-9-star-rating-highest-among-prm-leaders-302784020.html" target="_blank" rel="noopener">ZINFI G2 Summer 2026 Leader announcement</a>, <a href="https://www.g2.com/products/zinfi-unified-partner-management-upm/reviews" target="_blank" rel="noopener">ZINFI Unified Partner Management G2 reviews</a>, <a href="https://www.zinfi.com/blog/prm-software-pricing-guide/" target="_blank" rel="noopener">ZINFI PRM software pricing guide (own blog)</a>, <a href="https://www.prnewswire.com/news-releases/zinfi-technologies-once-again-named-a-leader-in-g2-grid-report-for-partner-relationship-management-prm-spring-2026-302722010.html" target="_blank" rel="noopener">ZINFI Spring 2026 G2 Leader press release</a>, <a href="https://prospeo.io/s/zinfi-pricing-reviews-pros-and-cons" target="_blank" rel="noopener">Prospeo: ZINFI pricing and reviews</a></div>
+</section>
+<section class="deep-dive-section">
+<h2>Allbound </h2>
+<div class="program-name">PRM (Partner Relationship Management)</div>
+
+<div class="deep-dive-grid"><div class="dd-row"><span class="dd-label">Website</span><span class="dd-value">https://www.allbound.com/ (product now sold under parent brand Channelscaler, https://channelscaler.com/, following its 2025 merger with Channel Mechanics)</span></div><div class="dd-row"><span class="dd-label">Public pricing</span><span class="dd-value">no</span></div><div class="dd-row"><span class="dd-label">Starting price</span><span class="dd-value">Not disclosed (historical circa-2020 pricing was ~$995/mo base)</span></div><div class="dd-row"><span class="dd-label">Pricing notes</span><span class="dd-value">Allbound's G2 pricing page states 'has not provided pricing information for this product' — contact sales required. Company messaging emphasizes flat-rate pricing regardless of partner count ('what you see is what you get'). Historical (pre-2022) pricing was reported at $995/mo base with add-ons: Pipeline Manager add-on $595/mo, Marketing Center add-on $395/mo. Third-party estimates place current pricing around $1,500-$3,000+/mo for mid-market deployments. Source: https://www.g2.com/products/allbound-prm/pricing, https://start.askwonder.com/insights/prm-software-1-6r28693pv</span></div><div class="dd-row"><span class="dd-label">Key integrations</span><span class="dd-value">Salesforce, HubSpot, Pipedrive, Zoho CRM, SugarCRM, Microsoft Dynamics 365</span></div><div class="dd-row"><span class="dd-label">Integration count</span><span class="dd-value">Not explicitly published</span></div><div class="dd-row"><span class="dd-label">Ecosystem size</span><span class="dd-value">Not explicitly published; claims customer acquisition increases of 55% and cost savings of 65% through partner-sourced business automation (marketing claim, not a partner-count figure)</span></div><div class="dd-row"><span class="dd-label">Last funding round</span><span class="dd-value">$43M majority growth investment from Invictus Growth Partners, July 26, 2022</span></div><div class="dd-row"><span class="dd-label">Total funding</span><span class="dd-value">~$43M (Invictus Growth Partners round; prior funding history not separately disclosed)</span></div><div class="dd-row"><span class="dd-label">G2 rating</span><span class="dd-value">4.4 (listed under 'Channelscaler' on G2 following the 2025 Allbound/Channel Mechanics merger)</span></div><div class="dd-row"><span class="dd-label">G2 review count</span><span class="dd-value">453</span></div><div class="dd-row"><span class="dd-label">Best-fit ICP</span><span class="dd-value">Mid-market SaaS, Channel-heavy</span></div></div>
+<h3 style="font-size:var(--text-base);font-weight:700;margin-bottom:var(--space-2);">Recent changes</h3><ul class="mini-timeline"><li><span class="tl-date">2025-05/06</span><span class="tl-body">Allbound and Channel Mechanics merged and rebranded under unified 'Channelscaler' brand &mdash; <a href="https://channelscaler.com/resources/blog/allbound-and-channel-mechanics-now-channelscaler-join-forces-to-provide-industrys-most-comprehensive-prm-platform/" target="_blank" rel="noopener">source</a></span></li><li><span class="tl-date">2025-07/08</span><span class="tl-body">Channelscaler (combined entity) recognized as Leader in G2 Fall 2024/2025 Partner Management Software Grid &mdash; <a href="https://channelscaler.com/resources/blog/channel-mechanics-and-allbound-now-channelscaler-soar-as-g2-leaders-in-fall-2024-report/" target="_blank" rel="noopener">source</a></span></li><li><span class="tl-date">2025-2026</span><span class="tl-body">Combined platform positioned as 'industry's most comprehensive PRM platform' spanning incentive management (from Channel Mechanics) and core PRM (from Allbound) &mdash; <a href="https://channelscaler.com/about/" target="_blank" rel="noopener">source</a></span></li></ul>
+<div class="sources-footer">Sources: <a href="https://www.businesswire.com/news/home/20220725005961/en/Allbound-Inc.-Raises-$43-Million-from-Invictus-Growth-Partners" target="_blank" rel="noopener">Business Wire: Allbound raises $43M from Invictus Growth Partners</a>, <a href="https://channelscaler.com/resources/blog/allbound-and-channel-mechanics-now-channelscaler-join-forces-to-provide-industrys-most-comprehensive-prm-platform/" target="_blank" rel="noopener">Channelscaler (Allbound + Channel Mechanics merger announcement)</a>, <a href="https://www.g2.com/products/channelscaler/reviews" target="_blank" rel="noopener">Channelscaler G2 reviews (formerly Allbound PRM listing)</a>, <a href="https://www.g2.com/products/allbound-prm/pricing" target="_blank" rel="noopener">Allbound PRM G2 pricing page</a>, <a href="https://www.channelnomics.com/insights/channelmechanics-rebrands-as-channelscaler" target="_blank" rel="noopener">Channelnomics: Channel Mechanics rebrands as Channelscaler</a></div>
+</section>
+<section class="deep-dive-section">
+<h2>WorkSpan </h2>
+<div class="program-name">Co-sell orchestration</div>
+
+<div class="deep-dive-grid"><div class="dd-row"><span class="dd-label">Website</span><span class="dd-value">https://www.workspan.com/</span></div><div class="dd-row"><span class="dd-label">Public pricing</span><span class="dd-value">no</span></div><div class="dd-row"><span class="dd-label">Starting price</span><span class="dd-value">Not disclosed (contact sales); Vendr reports median annual spend around $48,000/yr</span></div><div class="dd-row"><span class="dd-label">Pricing notes</span><span class="dd-value">WorkSpan pricing is fully custom/quote-based across its Starter, Pro, Premium, and Enterprise tiers (per AWS Marketplace and G2 listings, both stating 'pricing provided by WorkSpan' / 'contact us'). Vendr benchmarking data suggests a median annual contract value in the ~$48,000/yr range for mid-size deployments. Source: https://www.g2.com/compare/unifyr-one-vs-workspan, https://www.g2.com/products/workspan/reviews</span></div><div class="dd-row"><span class="dd-label">Key integrations</span><span class="dd-value">AWS ACE (Partner Central), Microsoft Partner Center, Salesforce, HubSpot, Microsoft Dynamics 365, Zoho CRM, Pipedrive, SugarCRM</span></div><div class="dd-row"><span class="dd-label">Integration count</span><span class="dd-value">Not explicitly published</span></div><div class="dd-row"><span class="dd-label">Ecosystem size</span><span class="dd-value">15,000+ companies claimed on the WorkSpan co-sell network (per company marketing materials)</span></div><div class="dd-row"><span class="dd-label">Last funding round</span><span class="dd-value">Series C, $30M, October 5, 2022, led by Insight Partners with participation from Mayfield and M12 (Microsoft's venture fund)</span></div><div class="dd-row"><span class="dd-label">Total funding</span><span class="dd-value">$66M total (Insight Partners, Mayfield Fund, M12, Redline Capital Management)</span></div><div class="dd-row"><span class="dd-label">G2 rating</span><span class="dd-value">4.3</span></div><div class="dd-row"><span class="dd-label">G2 review count</span><span class="dd-value">29</span></div><div class="dd-row"><span class="dd-label">Best-fit ICP</span><span class="dd-value">Enterprise, Ecosystem-first</span></div></div>
+<h3 style="font-size:var(--text-base);font-weight:700;margin-bottom:var(--space-2);">Recent changes</h3><ul class="mini-timeline"><li><span class="tl-date">2025-03-27</span><span class="tl-body">WorkSpan AI launched to eliminate the 'partner complexity tax' in sales execution &mdash; <a href="https://www.businesswire.com/news/home/20250327578659/en/WorkSpan-Launches-WorkSpan-AI-to-Eliminate-the-Partner-Complexity-Tax-in-Sales-Execution" target="_blank" rel="noopener">source</a></span></li><li><span class="tl-date">2025-03</span><span class="tl-body">AI Teammates for Partner Sales feature suite made generally available &mdash; <a href="https://www.workspan.com/platform/ai-teammates" target="_blank" rel="noopener">source</a></span></li><li><span class="tl-date">2025-07-17/18</span><span class="tl-body">Generative AI co-sell agent launched on AWS AI Agent Marketplace &mdash; <a href="https://www.workspan.com/blog/aws-agent-marketplace-launch" target="_blank" rel="noopener">source</a></span></li></ul>
+<div class="sources-footer">Sources: <a href="https://www.g2.com/products/workspan/reviews" target="_blank" rel="noopener">WorkSpan G2 reviews</a>, <a href="https://www.workspan.com/blog/accelerating-the-decade-of-ecosystems-workspan-30-million-series-c-led-by-insight-ventures" target="_blank" rel="noopener">WorkSpan blog: $30M Series C led by Insight Partners</a>, <a href="https://www.businessinsider.com/workspan-partner-network-selling-startup-30-million-series-c-2022-10" target="_blank" rel="noopener">Business Insider: WorkSpan raises $30M Series C, $66M total</a>, <a href="https://www.businesswire.com/news/home/20250327578659/en/WorkSpan-Launches-WorkSpan-AI-to-Eliminate-the-Partner-Complexity-Tax-in-Sales-Execution" target="_blank" rel="noopener">Business Wire: WorkSpan AI launch</a>, <a href="https://www.workspan.com/blog/aws-agent-marketplace-launch" target="_blank" rel="noopener">WorkSpan AWS Agent Marketplace launch</a></div>
+</section>
+<section class="deep-dive-section absorbed">
+<h2>Partnered <span class="absorbed-badge">Absorbed by Crossbeam Sales Edge (May 2022)</span></h2>
+<div class="program-name">Co-sell orchestration</div>
+<p style="font-size:var(--text-sm);color:var(--text-muted);font-style:italic;margin-bottom:var(--space-4);line-height:1.6;">Formerly a standalone co-sell orchestration product; now available exclusively as part of Crossbeam. Included for historical/comparison context.</p>
+<div class="deep-dive-grid"><div class="dd-row"><span class="dd-label">Website</span><span class="dd-value">N/A - product discontinued as standalone; functionality now sold as 'Crossbeam Sales Edge' at https://www.crossbeam.com/</span></div><div class="dd-row"><span class="dd-label">Public pricing</span><span class="dd-value">N/A - product discontinued</span></div><div class="dd-row"><span class="dd-label">Starting price</span><span class="dd-value">Discontinued as standalone product; now sold as 'Crossbeam Sales Edge' add-on, available on Crossbeam's Connector or Supernode tiers at incremental cost</span></div><div class="dd-row"><span class="dd-label">Pricing notes</span><span class="dd-value">Partnered (originally 'Sponsorfied,' a Y Combinator S12 company founded 2010/2012, based in Hoboken, NJ) was acquired by Crossbeam on May 18, 2022. The team and product were fully integrated into Crossbeam by fall 2022, relaunched as 'Crossbeam Sales Edge' at the Connector Summit on November 7, 2022. No standalone pricing exists today. Source: https://insider.crossbeam.com/entry/partnered-crossbeam-acquired and https://www.linkedin.com/posts/adamjmichalski_excited-to-announce-that-crossbeam-has-acquired-activity-6932780728082468865-mmxh</span></div><div class="dd-row"><span class="dd-label">Key integrations</span><span class="dd-value">Salesforce (pre-acquisition), Now fully merged into Crossbeam's integration stack</span></div><div class="dd-row"><span class="dd-label">Integration count</span><span class="dd-value">N/A - discontinued</span></div><div class="dd-row"><span class="dd-label">Ecosystem size</span><span class="dd-value">N/A - discontinued; at acquisition, Crossbeam's network stood at 8,500+ companies</span></div><div class="dd-row"><span class="dd-label">Last funding round</span><span class="dd-value">Seed, ~$850K, July 2014 (as 'Partnered'); company originally raised early seed capital as 'Sponsorfied' circa 2012</span></div><div class="dd-row"><span class="dd-label">Total funding</span><span class="dd-value">~$1.1M total (Y Combinator, Comcast Ventures, Rothenberg Ventures, Kima Ventures, and others) per CB Insights — a very small, early-stage raise relative to category peers</span></div><div class="dd-row"><span class="dd-label">G2 rating</span><span class="dd-value">Not available / product discontinued — G2's 'Partnered' listing is stale (last substantive content dated 2021) and does not reflect current status or a confirmed star rating</span></div><div class="dd-row"><span class="dd-label">G2 review count</span><span class="dd-value">Not available / product discontinued</span></div><div class="dd-row"><span class="dd-label">Best-fit ICP</span><span class="dd-value">N/A - historical only, product discontinued</span></div></div>
+<h3 style="font-size:var(--text-base);font-weight:700;margin-bottom:var(--space-2);">Recent changes</h3><ul class="mini-timeline"><li><span class="tl-date">2022-05-18</span><span class="tl-body">Acquired by Crossbeam &mdash; <a href="https://insider.crossbeam.com/entry/partnered-crossbeam-acquired" target="_blank" rel="noopener">source</a></span></li><li><span class="tl-date">2022-11-07</span><span class="tl-body">Relaunched as 'Crossbeam Sales Edge,' giving sales reps direct access to partner-sourced intel and warm intro requests from account dashboards &mdash; <a href="https://www.youtube.com/watch?v=q9Nsul-_mdA" target="_blank" rel="noopener">source</a></span></li><li><span class="tl-date">2022-2024</span><span class="tl-body">Partnered founder Adam Michalski became VP of Ecosystem at Crossbeam, continuing to lead the Sales Edge product line &mdash; <a href="https://pulse2.com/crossbeam-adam-michalski-profile/" target="_blank" rel="noopener">source</a></span></li></ul>
+<div class="sources-footer">Sources: <a href="https://insider.crossbeam.com/entry/partnered-crossbeam-acquired" target="_blank" rel="noopener">Crossbeam Insider: Crossbeam has acquired Partnered</a>, <a href="https://www.linkedin.com/posts/adamjmichalski_excited-to-announce-that-crossbeam-has-acquired-activity-6932780728082468865-mmxh" target="_blank" rel="noopener">Adam Michalski LinkedIn announcement</a>, <a href="https://www.cbinsights.com/company/partnered" target="_blank" rel="noopener">CB Insights: Partnered company profile and funding</a>, <a href="https://pulse2.com/crossbeam-adam-michalski-profile/" target="_blank" rel="noopener">Pulse 2.0: Crossbeam/Adam Michalski profile</a>, <a href="https://www.youtube.com/watch?v=q9Nsul-_mdA" target="_blank" rel="noopener">Connector Summit 2022: Crossbeam Sales Edge launch</a>, <a href="https://techcrunch.com/2014/07/01/partnered-raises-850k-in-fresh-seed-funding-to-pair-big-brands-with-startups/" target="_blank" rel="noopener">TechCrunch: Partnered raises $850K seed (2014)</a></div>
+</section>
+</div>
+<!-- Tab: Insights -->
+<div class="tab-panel" id="tab-insights">
+<h2 class="section-title">Insights</h2>
+<div class="editor-callout">
+<strong>Editor's note:</strong> This dashboard shows 8 platforms, but only 6 remain independently operating. Reveal and Partnered are both now part of Crossbeam &mdash; see below for the acquisition timeline and what changed for customers.
+</div>
+
+<div class="insight-block">
+<h3>1. "Crossbeam vs. Reveal" is now a historical query, not a live comparison</h3>
+<p>Reveal was acquired by Crossbeam in an all-stock merger announced <a href="https://tech.eu/2024/06/25/crossbeam-acquires-reveal-in-all-stock-transaction/" target="_blank" rel="noopener">June 24-25, 2024</a>, and the standalone Reveal platform and website were fully decommissioned on <a href="https://www.crossbeam.com/reveal-platform-sunset" target="_blank" rel="noopener">June 1, 2025</a>, with all customers migrated to Crossbeam. Anyone still searching "Crossbeam vs Reveal" is asking about a company that no longer independently exists.</p>
+<p>Content targeting this term should be reframed as "Crossbeam (formerly Reveal): what happened and what changed for customers" &mdash; there's a real content gap here since most existing comparison pages predate the 2024 merger and are now stale.</p>
+<p class="why-matters">Why this matters for partnerships: anyone benchmarking account-mapping tools today needs to know Reveal isn't a live alternative &mdash; it's a Crossbeam case study, not a competitor.</p>
+</div>
+
+<div class="insight-block">
+<h3>2. Crossbeam has quietly become a two-time acquirer in this exact category</h3>
+<p>Beyond Reveal, Crossbeam also acquired <a href="https://insider.crossbeam.com/entry/partnered-crossbeam-acquired" target="_blank" rel="noopener">Partnered on May 18, 2022</a>, rebranding it as "Crossbeam Sales Edge." That means of the original 8 names in this research brief, only 6 remain independently operating companies: Crossbeam, PartnerStack, Impartner, ZINFI, Allbound/Channelscaler, and WorkSpan.</p>
+<p>A "state of the ELG market" or "partnership tech landscape 2026" piece that calls out this consolidation trend directly fills a real gap &mdash; most existing landscape graphics and blog posts still list Reveal and Partnered as active, independent vendors.</p>
+<p class="why-matters">Why this matters for partnerships: buyers evaluating "best-of-breed" ecosystem stacks should know two of their shortlist names already collapsed into one vendor &mdash; Crossbeam now owns account mapping, co-sell, and attribution in a single platform.</p>
+</div>
+
+<div class="insight-block">
+<h3>3. Every major vendor shipped a flagship AI feature within the last 12 months</h3>
+<p>This is a genuine category-wide pattern: Crossbeam Copilot (2024-2025), PartnerStack AI Matches plus MCP integration (<a href="https://partnerstack.com/articles/series-b" target="_blank" rel="noopener">Oct-Nov 2025</a>), Impartner's Aimi engine (<a href="https://impartner.com/request-prm-pricing/" target="_blank" rel="noopener">Dec 11, 2025</a>), ZINFI's AI-native co-selling management (<a href="https://www.prnewswire.com/news-releases/g2-summer-2026-grid-report-names-zinfi-a-leader-in-partner-relationship-management-with-4-9-star-rating-highest-among-prm-leaders-302784020.html" target="_blank" rel="noopener">May 2026</a>) and ZINFI.AI (<a href="https://www.prnewswire.com/news-releases/zinfi-technologies-once-again-named-a-leader-in-g2-grid-report-for-partner-relationship-management-prm-spring-2026-302722010.html" target="_blank" rel="noopener">March 2026</a>), and WorkSpan AI / AI Teammates (<a href="https://www.businesswire.com/news/home/20250327578659/en/WorkSpan-Launches-WorkSpan-AI-to-Eliminate-the-Partner-Complexity-Tax-in-Sales-Execution" target="_blank" rel="noopener">March 27, 2025</a>).</p>
+<p>A comparison table of "AI features across partnership platforms" targets buyers actively evaluating vendors on this exact axis right now &mdash; this is no longer an emerging trend, it's table stakes across the entire ELG category.</p>
+<p class="why-matters">Why this matters for partnerships: if your current PRM or account-mapping vendor hasn't shipped an AI feature in the past year, that's now the outlier position, not the norm.</p>
+</div>
+
+<div class="insight-block">
+<h3>4. ZINFI vs. Impartner is an active, underserved rivalry</h3>
+<p>ZINFI runs its own head-to-head comparison pages against Impartner (see <a href="https://www.zinfi.com/compare/" target="_blank" rel="noopener">zinfi.com/compare</a>), leaning on its G2 rating advantage (4.9 vs. 4.5) while remaining bootstrapped against Impartner's $113M+ in VC backing (<a href="https://www.bpc.com/insights/impartner-raises-50m-to-accelerate-growth" target="_blank" rel="noopener">Brighton Park Capital</a>; <a href="https://www.thesaasnews.com/news/impartner-raises-35-million-in-funding/" target="_blank" rel="noopener">The SaaS News</a>).</p>
+<p>A neutral, well-sourced "ZINFI vs. Impartner" comparison covering pricing, funding, satisfaction scores, and ICP fit would likely outrank vendor-authored comparison pages, which are inherently biased toward whoever wrote them.</p>
+<p class="why-matters">Why this matters for partnerships: the highest-rated PRM in the category (ZINFI, 4.9/5) has raised zero venture funding, which should reframe how buyers weigh funding size against product satisfaction when shortlisting vendors.</p>
+</div>
+
+<div class="insight-block">
+<h3>5. Category-wide consolidation: PRM and account-mapping are merging into "ecosystem revenue platforms"</h3>
+<p>Crossbeam's own positioning has shifted from a pure data-escrow/account-mapping tool toward a full "Ecosystem Revenue Platform" spanning mapping, co-sell (Sales Edge), and attribution &mdash; the same trajectory seen at Impartner (adding HyperscalerGTM and Aimi AI) and ZINFI (folding co-selling into its Unified Partner Management suite).</p>
+<p>This signals a maturing market bifurcating into a handful of full-stack platforms (Crossbeam, Impartner, ZINFI, PartnerStack) versus shrinking, feature-narrow niche tools &mdash; a useful market-map narrative for a "who's really competing with whom in 2026" piece.</p>
+<p class="why-matters">Why this matters for partnerships: category labels like "PRM" or "account mapping" are becoming less useful for vendor selection &mdash; evaluate platforms on the full breadth of ecosystem functions they now cover, not their original category tag.</p>
+</div>
+
+</div>
+<!-- Tab: Changelog -->
+<div class="tab-panel" id="tab-changelog">
+<h2 class="section-title">Running Changelog</h2>
+<div class="changelog">
+<div class="changelog-entry">
+<span class="changelog-date">Jul 3</span>
+<div class="changelog-content">
+<div class="title"><span class="badge new">PartnerAwesome</span> Initial launch &mdash; July 3, 2026</div>
+<div class="detail">First publication of the ELG Tech Stack Comparison dashboard, covering 8 researched vendors (Crossbeam, Reveal, PartnerStack, Impartner, ZINFI, Allbound, WorkSpan, Partnered) across pricing, integrations, funding, G2 ratings, and 2026 AI features. Reveal and Partnered are included as historical/absorbed entries following their respective mergers into Crossbeam. Future updates will track new funding events, pricing changes, G2 grid movements, and AI feature launches across the category.</div>
+</div>
+</div>
+</div>
+
+</div>
+<footer>
+<a href="https://www.perplexity.ai/computer" rel="noopener noreferrer" target="_blank">Created with Perplexity Computer</a>
+</footer>
+</div>
+<script>
+// Theme toggle
+(function(){
+  const btn = document.querySelector('[data-theme-toggle]');
+  const root = document.documentElement;
+  let theme = root.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light');
+  root.setAttribute('data-theme', theme);
+  updateIcon();
+  btn.addEventListener('click', () => {
+    theme = theme === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', theme);
+    updateIcon();
+  });
+  function updateIcon() {
+    btn.innerHTML = theme === 'dark'
+      ? '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
+      : '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  }
+})();
+
+// Tabs
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+  });
+});
+</script>
+
+</div>
