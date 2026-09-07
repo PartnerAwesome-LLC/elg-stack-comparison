@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-03T11:11:00-04:00",
+  "generated_at": "2026-09-07T11:15:00-04:00",
   "vendors": [
     {
       "vendor_name": "Crossbeam",
@@ -20,15 +20,21 @@
         "ChatGPT/Claude/Gemini (AI copilots)",
         "Impartner",
         "Databricks",
-        "Glean (via Crossbeam MCP)"
+        "Glean (via Crossbeam MCP)",
+        "Google Sheets (Offline Partners)"
       ],
       "integration_count": "Not explicitly published; positioned as 'unlimited integrations' on Supernode/Enterprise tiers",
       "ecosystem_size": "~30,000 companies/GTM teams on the combined network post-Reveal merger",
       "last_funding_round": "Series C, $76M, October 26, 2021, led by Andreessen Horowitz",
       "total_funding": "~$116.85M across 4 rounds",
       "g2_rating": "4.8",
-      "g2_review_count": "410",
+      "g2_review_count": "411",
       "recent_features": [
+        {
+          "feature": "August release: Partner Invitations and Open Data Partners (ODPs) reached general availability; Offline Partners added Google Sheets as a data source; Integration Seat user became generally available; AI Agents entered public beta for automated Slack ecosystem alerts",
+          "date": "2026-08-19",
+          "source": "https://help.crossbeam.com/en/articles/16075353-crossbeam-product-release-notes-08-19-2026"
+        },
         {
           "feature": "April release: Dynamic Shared Lists, Net New Accounts in Pipeline Generation, Partner Account CRM Integration, Partner Score, and Partner Tracker beta",
           "date": "2026-04-15",
@@ -107,6 +113,14 @@
         {
           "label": "Crossbeam MCP Server limited availability",
           "url": "https://help.crossbeam.com/en/articles/12601327-crossbeam-mcp-server-limited-availability"
+        },
+        {
+          "label": "Crossbeam product release notes 08/19/26",
+          "url": "https://help.crossbeam.com/en/articles/16075353-crossbeam-product-release-notes-08-19-2026"
+        },
+        {
+          "label": "Crossbeam AI Agents public beta setup",
+          "url": "https://help.crossbeam.com/en/articles/15961519-setting-up-ai-agents-in-crossbeam-public-beta"
         }
       ]
     },
@@ -195,12 +209,17 @@
         "Evertune (AI visibility)"
       ],
       "integration_count": "Not explicitly published",
-      "ecosystem_size": "80,000-100,000+ active partners claimed on the PartnerStack Marketplace; markets itself as facilitating $1B+ in partner-sourced revenue",
+      "ecosystem_size": "138,000+ active affiliates, influencers, co-sell and channel partners claimed by AppDirect after acquisition; PartnerStack previously cited 80,000-100,000+ active partners",
       "last_funding_round": "Series B, $29M CAD/USD, May 26, 2021 (some sources cite $35M CAD)",
       "total_funding": "~$38M (across Seed and Series A/B rounds)",
       "g2_rating": "4.7",
-      "g2_review_count": "930",
+      "g2_review_count": "942",
       "recent_features": [
+        {
+          "feature": "AppDirect acquired PartnerStack, combining PartnerStack's PRM and partner network with AppDirect subscription commerce and Tackle.io; AppDirect said programs, contacts, and the current PartnerStack experience would remain unchanged during integration",
+          "date": "2026-04-14",
+          "source": "https://www.appdirect.com/about/press/releases/appdirect-acquires-partnerstack-creating-the-unified-subscription-commerce-platform-for-partner-led-growth"
+        },
         {
           "feature": "PartnerStack × Evertune integration launched, connecting AI-visibility/citation data to publisher and partner recruitment, activation, and revenue tracking",
           "date": "2026-01-29",
@@ -259,6 +278,14 @@
         {
           "label": "Evertune integration page",
           "url": "https://partnerstack.com/integrations/evertune"
+        },
+        {
+          "label": "AppDirect acquisition announcement",
+          "url": "https://www.appdirect.com/about/press/releases/appdirect-acquires-partnerstack-creating-the-unified-subscription-commerce-platform-for-partner-led-growth"
+        },
+        {
+          "label": "AppDirect and PartnerStack integration overview",
+          "url": "https://www.appdirect.com/appdirect-partnerstack-unite"
         }
       ]
     },
@@ -274,15 +301,26 @@
         "Microsoft Dynamics 365",
         "HubSpot",
         "Marketo",
-        "Highspot"
+        "Highspot",
+        "Impartner CPQ"
       ],
       "integration_count": "Not explicitly published",
       "ecosystem_size": "Not explicitly published (positions itself as serving 'millions of partners worldwide' across its customer base per TrustRadius profile)",
       "last_funding_round": "$35M growth capital from CIBC Innovation Banking, May 2022",
       "total_funding": "~$113-145M (includes $50M growth round led by Brighton Park Capital, October 2021, plus $35M CIBC growth capital, 2022)",
-      "g2_rating": "4.5",
-      "g2_review_count": "561",
+      "g2_rating": "4.4",
+      "g2_review_count": "570",
       "recent_features": [
+        {
+          "feature": "Expanded native CRM Sync for HubSpot announced, with reciprocal partner and CRM data synchronization and QuickStart templates",
+          "date": "2026-06-30",
+          "source": "https://www.businesswire.com/news/home/20260630824731/en/Impartner-Expands-PRM-Platform-with-Native-CRM-Sync-for-HubSpot"
+        },
+        {
+          "feature": "Impartner CPQ launched, giving partners self-service quoting inside the PRM workflow with vendor-controlled catalogs, pricing, rules, and approvals",
+          "date": "2026-08-20",
+          "source": "https://impartner.com/resources/blog/impartner-launches-the-first-cpq-built-for-partners"
+        },
         {
           "feature": "Partner marketing automation expanded with full automation, AdTech, and AI to drive measurable partner revenue",
           "date": "2026-03-31",
@@ -342,6 +380,14 @@
         {
           "label": "Impartner partner marketing automation and AI announcement",
           "url": "https://impartner.com/resources/blog/impartner-redefines-partner-marketing-automation-with-full-automation-adtech-and-ai-to-drive-measurable-revenue"
+        },
+        {
+          "label": "Impartner CPQ launch",
+          "url": "https://impartner.com/resources/blog/impartner-launches-the-first-cpq-built-for-partners"
+        },
+        {
+          "label": "Impartner native HubSpot CRM Sync",
+          "url": "https://www.businesswire.com/news/home/20260630824731/en/Impartner-Expands-PRM-Platform-with-Native-CRM-Sync-for-HubSpot"
         }
       ]
     },
@@ -349,9 +395,9 @@
       "vendor_name": "ZINFI",
       "category": "PRM (Partner Relationship Management)",
       "website": "https://www.zinfi.com/",
-      "pricing_public": "no",
-      "pricing_starting": "Not disclosed (all tiers require contacting sales); 30-day free trial available",
-      "pricing_notes": "ZINFI offers four unnamed/custom tiers (Basic, Starter, Professional, Enterprise per aggregator fitgap.com) with no published pricing anywhere — G2, Capterra, TrustRadius, and GetApp all list 'contact vendor.' Third-party market benchmarks estimate $300-$1,500/mo for small businesses (≤50 partners), $1,500-$5,000+/mo for mid-market (50-500 partners), and $5,000-$20,000+/mo for enterprise (500+ partners). A 30-day free trial with full platform access is offered. Sources: https://www.zinfi.com/blog/prm-software-pricing-guide/, https://prospeo.io/s/zinfi-pricing-reviews-pros-and-cons, https://www.capterra.com/p/10004590/ZINFIs-Partner-Relationship-Management/",
+      "pricing_public": "yes",
+      "pricing_starting": "$1,750/mo (Starter, up to 100 partners)",
+      "pricing_notes": "ZINFI now publishes Jump Start Experience (JSX) list pricing for programs up to 250 partners, billed annually: Starter $1,750/mo up to 100 partners or $2,250/mo up to 250; Professional $2,850/mo up to 100 or $3,500/mo up to 250; Enterprise contact sales. Source: https://www.zinfi.com/pricing/",
       "key_integrations": [
         "Salesforce",
         "Microsoft Dynamics 365",
@@ -359,15 +405,26 @@
         "Zoho CRM",
         "Stripe Connect",
         "Tipalti",
-        "Marketo"
+        "Marketo",
+        "MCP server (early access)"
       ],
       "integration_count": "Extensive integration library across CRM, collaboration, LMS, and payment processing categories; exact count not publicly disclosed",
       "ecosystem_size": "Not explicitly published; ~$23M annual revenue per ZoomInfo/Prospeo estimate",
       "last_funding_round": "None - bootstrapped/self-funded (no venture capital raised)",
       "total_funding": "$0 - ZINFI is fully bootstrapped, no VC funding on record (per PitchBook and Tracxn profiles)",
       "g2_rating": "4.9",
-      "g2_review_count": "725",
+      "g2_review_count": "732",
       "recent_features": [
+        {
+          "feature": "Named a G2 Fall 2026 PRM Leader with a 4.9/5 rating, 625 verified reviews in the Grid report, NPS of 95, and the highest score in all eight satisfaction categories among PRM Leaders",
+          "date": "2026-08-28",
+          "source": "https://www.zinfi.com/resources/press-releases/zinfi-g2-fall-2026-prm-leader/"
+        },
+        {
+          "feature": "MCP server early access opened for autonomous AI partner workflows, allowing governed agents to query and act on onboarding, deal registration, MDF, and incentive data",
+          "date": "2026-08-24",
+          "source": "https://www.einpresswire.com/article/936521156/zinfi-opens-early-access-to-mcp-server-for-autonomous-ai-partner-workflows"
+        },
         {
           "feature": "AI-powered Partner Onboarding module launched on Microsoft Azure AI Foundry; ZINFI says it cuts activation time by 60%",
           "date": "2026-04-23",
@@ -423,6 +480,18 @@
         {
           "label": "ZINFI AI-powered partner onboarding announcement",
           "url": "https://www.prnewswire.com/news-releases/new-ai-powered-partner-onboarding-software-from-zinfi-cuts-channel-partner-activation-time-by-60-302751302.html"
+        },
+        {
+          "label": "ZINFI JSX pricing",
+          "url": "https://www.zinfi.com/pricing/"
+        },
+        {
+          "label": "ZINFI MCP server early access",
+          "url": "https://www.einpresswire.com/article/936521156/zinfi-opens-early-access-to-mcp-server-for-autonomous-ai-partner-workflows"
+        },
+        {
+          "label": "ZINFI G2 Fall 2026 Leader announcement",
+          "url": "https://www.zinfi.com/resources/press-releases/zinfi-g2-fall-2026-prm-leader/"
         }
       ]
     },
@@ -442,15 +511,26 @@
         "Microsoft Dynamics 365",
         "PartnerTap",
         "Structured.ai",
-        "XTRM"
+        "XTRM",
+        "Microsoft Marketplace (Azure MACC)"
       ],
       "integration_count": "Not explicitly published",
       "ecosystem_size": "Not explicitly published; claims customer acquisition increases of 55% and cost savings of 65% through partner-sourced business automation (marketing claim, not a partner-count figure)",
       "last_funding_round": "$43M majority growth investment from Invictus Growth Partners, July 26, 2022",
       "total_funding": "~$43M (Invictus Growth Partners round; prior funding history not separately disclosed)",
       "g2_rating": "4.4 (listed under 'Channelscaler' on G2 following the 2025 Allbound/Channel Mechanics merger)",
-      "g2_review_count": "470",
+      "g2_review_count": "472",
       "recent_features": [
+        {
+          "feature": "Scaler Index launched as a data-driven benchmark for partner performance and program maturity, built from anonymized Channelscaler platform data",
+          "date": "2026-08-13",
+          "source": "https://www.globenewswire.com/news-release/2026/08/13/3344577/0/en/channelscaler-launches-scaler-index-a-new-benchmark-for-partner-performance.html"
+        },
+        {
+          "feature": "Channelscaler became available on Microsoft Marketplace, enabling customers to acquire and pay for its AI-driven PRM through Azure consumption commitments",
+          "date": "2026-08-05",
+          "source": "https://www.globenewswire.com/news-release/2026/08/05/3339385/0/en/channelscaler-brings-ai-powered-partner-relationship-management-to-microsoft-marketplace.html"
+        },
         {
           "feature": "Transparent modular pricing published: starts at $50,000 per module annually, fixed per partner program",
           "date": "2026-07-21",
@@ -523,6 +603,14 @@
         {
           "label": "Channelscaler Partner Network program page",
           "url": "https://channelscaler.com/partners/"
+        },
+        {
+          "label": "Channelscaler Microsoft Marketplace launch",
+          "url": "https://www.globenewswire.com/news-release/2026/08/05/3339385/0/en/channelscaler-brings-ai-powered-partner-relationship-management-to-microsoft-marketplace.html"
+        },
+        {
+          "label": "Channelscaler Scaler Index launch",
+          "url": "https://www.globenewswire.com/news-release/2026/08/13/3344577/0/en/channelscaler-launches-scaler-index-a-new-benchmark-for-partner-performance.html"
         }
       ]
     },
