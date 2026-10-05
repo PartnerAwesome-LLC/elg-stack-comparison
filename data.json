@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-07T11:15:00-04:00",
+  "generated_at": "2026-10-05T11:11:00-04:00",
   "vendors": [
     {
       "vendor_name": "Crossbeam",
@@ -7,7 +7,7 @@
       "website": "https://www.crossbeam.com/",
       "pricing_public": "yes",
       "pricing_starting": "Free tier available (Explorer, 3 seats); paid plans from $4,800/yr",
-      "pricing_notes": "Four tiers: Free/Explorer (3 seats, $0), Connector ($4,800/yr, 1 seat included, additional Full Access seats $1,800/user/yr, Sales seats $40/user/mo), Supernode (custom, higher seat minimums), Enterprise (custom, 100K+ record exports). Crossbeam Sales Edge (formerly the standalone Partnered product) is an add-on available on Connector/Supernode tiers at incremental cost. Source: https://www.crossbeam.com/pricing and https://monday.com/blog/crm-and-sales/prm-software/",
+      "pricing_notes": "Four tiers: Free/Explorer ($0, up to 3 Full Access seats), Connector ($4,800/yr, 1 seat included; additional Full Access seats $1,800/user/yr), Supernode (custom), and Enterprise (custom). All plans include annual Crossbeam Credits for AI/MCP access: Free 50, Connector 500, Supernode 2,500, Enterprise 5,000. Supernode and Enterprise can buy extra credit packs: 10,000 for $1,000, 25,000 for $2,500, or 100,000 for $9,000 (10% discount); credits are pooled and reset annually. MCP credit metering began September 1, 2026. Crossbeam Sales Edge (formerly Partnered) is an add-on. Sources: https://www.crossbeam.com/pricing, https://help.crossbeam.com/en/articles/12601327-crossbeam-mcp-server, https://help.crossbeam.com/en/articles/15588582-crossbeam-credits-faq",
       "key_integrations": [
         "Salesforce",
         "HubSpot",
@@ -21,15 +21,21 @@
         "Impartner",
         "Databricks",
         "Glean (via Crossbeam MCP)",
-        "Google Sheets (Offline Partners)"
+        "Google Sheets (Offline Partners)",
+        "Superhuman (Crossbeam AI Connector)"
       ],
       "integration_count": "Not explicitly published; positioned as 'unlimited integrations' on Supernode/Enterprise tiers",
       "ecosystem_size": "~30,000 companies/GTM teams on the combined network post-Reveal merger",
       "last_funding_round": "Series C, $76M, October 26, 2021, led by Andreessen Horowitz",
       "total_funding": "~$116.85M across 4 rounds",
       "g2_rating": "4.8",
-      "g2_review_count": "411",
+      "g2_review_count": "414",
       "recent_features": [
+        {
+          "feature": "Crossbeam MCP and native AI connectors became generally available on all plans, including Free and Connector; AI access is metered through annual Crossbeam Credits (50–5,000 included by tier), with top-up packs available on Supernode and Enterprise",
+          "date": "2026-09-01",
+          "source": "https://help.crossbeam.com/en/articles/12601327-crossbeam-mcp-server"
+        },
         {
           "feature": "August release: Partner Invitations and Open Data Partners (ODPs) reached general availability; Offline Partners added Google Sheets as a data source; Integration Seat user became generally available; AI Agents entered public beta for automated Slack ecosystem alerts",
           "date": "2026-08-19",
@@ -121,6 +127,14 @@
         {
           "label": "Crossbeam AI Agents public beta setup",
           "url": "https://help.crossbeam.com/en/articles/15961519-setting-up-ai-agents-in-crossbeam-public-beta"
+        },
+        {
+          "label": "Crossbeam MCP general availability and supported tools",
+          "url": "https://help.crossbeam.com/en/articles/12601327-crossbeam-mcp-server"
+        },
+        {
+          "label": "Crossbeam Credits FAQ",
+          "url": "https://help.crossbeam.com/en/articles/15588582-crossbeam-credits-faq"
         }
       ]
     },
@@ -194,9 +208,9 @@
       "vendor_name": "PartnerStack",
       "category": "Partner payments/marketplace",
       "website": "https://partnerstack.com/",
-      "pricing_public": "no",
-      "pricing_starting": "Not disclosed publicly since ~2020 (historical 2019 pricing was $800/mo for SMB tier)",
-      "pricing_notes": "PartnerStack removed public pricing from its website around 2020 and now operates entirely on a 'contact sales / book a demo' model. Its own pricing page states 'Let us personalize a plan and pricing that suit your business.' Third-party benchmarking (Vendr) shows a median annual spend of $19,616/yr across 62 purchases, with a typical range of $9,186–$37,770/yr; Starter tier commonly runs $500-$1,500/mo, Growth tier $1,500-$4,000/mo, and Enterprise contracts $30,000-$100,000+/yr. PartnerStack also charges a percentage-based commission override fee (roughly 1.5%-15% depending on plan/volume) on partner payouts processed through the platform, on top of the base subscription. Sources: https://partnerstack.com/pricing, https://www.vendr.com/marketplace/partnerstack, https://affonso.io/blog/partnerstack-pricing-guide",
+      "pricing_public": "partial (Spark)",
+      "pricing_starting": "Spark: $0/mo + 10% processing fee on commissions paid out; Launch/Growth/Enterprise are quote-based",
+      "pricing_notes": "PartnerStack presents a separate self-serve Spark offer at $0/month plus a 10% processing fee on commissions paid out. Spark is single-user, supports basic tracking, Stripe sale tracking and automated payouts, and does not include access to the PartnerStack Network. The full platform is offered as Launch, Growth and Enterprise; the pricing page says quotes depend on partner-program size, features and support and are confirmed during a demo. Third-party Vendr benchmarking is an estimate, not list pricing. Sources: https://partnerstack.com/platform/spark and https://partnerstack.com/pricing",
       "key_integrations": [
         "Salesforce",
         "HubSpot",
@@ -206,14 +220,15 @@
         "Segment",
         "Intercom",
         "Chargebee",
-        "Evertune (AI visibility)"
+        "Evertune (AI visibility)",
+        "PartnerStack AI + MCP Connector"
       ],
       "integration_count": "Not explicitly published",
       "ecosystem_size": "138,000+ active affiliates, influencers, co-sell and channel partners claimed by AppDirect after acquisition; PartnerStack previously cited 80,000-100,000+ active partners",
       "last_funding_round": "Series B, $29M CAD/USD, May 26, 2021 (some sources cite $35M CAD)",
       "total_funding": "~$38M (across Seed and Series A/B rounds)",
       "g2_rating": "4.7",
-      "g2_review_count": "942",
+      "g2_review_count": "946",
       "recent_features": [
         {
           "feature": "AppDirect acquired PartnerStack, combining PartnerStack's PRM and partner network with AppDirect subscription commerce and Tackle.io; AppDirect said programs, contacts, and the current PartnerStack experience would remain unchanged during integration",
@@ -286,6 +301,10 @@
         {
           "label": "AppDirect and PartnerStack integration overview",
           "url": "https://www.appdirect.com/appdirect-partnerstack-unite"
+        },
+        {
+          "label": "PartnerStack Spark pricing and features",
+          "url": "https://partnerstack.com/platform/spark"
         }
       ]
     },
@@ -309,7 +328,7 @@
       "last_funding_round": "$35M growth capital from CIBC Innovation Banking, May 2022",
       "total_funding": "~$113-145M (includes $50M growth round led by Brighton Park Capital, October 2021, plus $35M CIBC growth capital, 2022)",
       "g2_rating": "4.4",
-      "g2_review_count": "570",
+      "g2_review_count": "572",
       "recent_features": [
         {
           "feature": "Expanded native CRM Sync for HubSpot announced, with reciprocal partner and CRM data synchronization and QuickStart templates",
@@ -396,8 +415,8 @@
       "category": "PRM (Partner Relationship Management)",
       "website": "https://www.zinfi.com/",
       "pricing_public": "yes",
-      "pricing_starting": "$1,750/mo (Starter, up to 100 partners)",
-      "pricing_notes": "ZINFI now publishes Jump Start Experience (JSX) list pricing for programs up to 250 partners, billed annually: Starter $1,750/mo up to 100 partners or $2,250/mo up to 250; Professional $2,850/mo up to 100 or $3,500/mo up to 250; Enterprise contact sales. Source: https://www.zinfi.com/pricing/",
+      "pricing_starting": "$1,450/mo (Starter tier card; annual billing; $3,480 setup)",
+      "pricing_notes": "ZINFI's current JSX pricing page lists Starter at $1,450/mo ($17,400/yr) with $3,480 setup/configuration, and Professional at $2,350/mo ($28,200/yr) with $5,640 setup/configuration; Enterprise is custom, with setup at 20% of Year-1 price. All prices are billed annually. Important: the same page's package-summary table for programs up to 250 partners still lists Starter at $2,250/mo and Professional at $3,500/mo, an unexplained discrepancy with the tier cards. Confirm the applicable cohort price directly with ZINFI before budgeting. Source: https://www.zinfi.com/pricing/",
       "key_integrations": [
         "Salesforce",
         "Microsoft Dynamics 365",
@@ -406,15 +425,26 @@
         "Stripe Connect",
         "Tipalti",
         "Marketo",
-        "MCP server (early access)"
+        "MCP server (early access)",
+        "Zapier (embedded no-code integration; 9,000+ apps)"
       ],
-      "integration_count": "Extensive integration library across CRM, collaboration, LMS, and payment processing categories; exact count not publicly disclosed",
+      "integration_count": "Zapier integration connects URM to 9,000+ business applications; ZINFI does not publish a separate native-integration total",
       "ecosystem_size": "Not explicitly published; ~$23M annual revenue per ZoomInfo/Prospeo estimate",
       "last_funding_round": "None - bootstrapped/self-funded (no venture capital raised)",
       "total_funding": "$0 - ZINFI is fully bootstrapped, no VC funding on record (per PitchBook and Tracxn profiles)",
       "g2_rating": "4.9",
-      "g2_review_count": "732",
+      "g2_review_count": "738",
       "recent_features": [
+        {
+          "feature": "JSX pricing page now lists Starter from $1,450/mo and Professional from $2,350/mo, plus setup fees; the same page's up-to-250-partner summary retains higher $2,250/$3,500 monthly prices",
+          "date": "2026-09-16",
+          "source": "https://www.zinfi.com/pricing/"
+        },
+        {
+          "feature": "ZINFI announced an embedded, no-code Zapier integration connecting its Unified Revenue Management platform to more than 9,000 business applications, with governed bidirectional partner, deal, lead, and incentive data flows",
+          "date": "2026-09-16",
+          "source": "https://www.zinfi.com/resources/press-releases/zinfi-zapier-urm-integration/"
+        },
         {
           "feature": "Named a G2 Fall 2026 PRM Leader with a 4.9/5 rating, 625 verified reviews in the Grid report, NPS of 95, and the highest score in all eight satisfaction categories among PRM Leaders",
           "date": "2026-08-28",
@@ -492,6 +522,10 @@
         {
           "label": "ZINFI G2 Fall 2026 Leader announcement",
           "url": "https://www.zinfi.com/resources/press-releases/zinfi-g2-fall-2026-prm-leader/"
+        },
+        {
+          "label": "ZINFI Zapier integration announcement",
+          "url": "https://www.zinfi.com/resources/press-releases/zinfi-zapier-urm-integration/"
         }
       ]
     },
@@ -519,8 +553,13 @@
       "last_funding_round": "$43M majority growth investment from Invictus Growth Partners, July 26, 2022",
       "total_funding": "~$43M (Invictus Growth Partners round; prior funding history not separately disclosed)",
       "g2_rating": "4.4 (listed under 'Channelscaler' on G2 following the 2025 Allbound/Channel Mechanics merger)",
-      "g2_review_count": "472",
+      "g2_review_count": "475",
       "recent_features": [
+        {
+          "feature": "Channelscaler appointed Rachel Fernandes SVP of Product and Jess Green SVP of Sales, citing an enterprise-growth phase and accelerated investment in AI, ecosystem intelligence, and a unified platform",
+          "date": "2026-09-30",
+          "source": "https://www.globenewswire.com/news-release/2026/09/30/3371972/0/en/channelscaler-appoints-new-product-and-sales-leaders-to-drive-next-phase-of-growth.html"
+        },
         {
           "feature": "Scaler Index launched as a data-driven benchmark for partner performance and program maturity, built from anonymized Channelscaler platform data",
           "date": "2026-08-13",
@@ -611,6 +650,10 @@
         {
           "label": "Channelscaler Scaler Index launch",
           "url": "https://www.globenewswire.com/news-release/2026/08/13/3344577/0/en/channelscaler-launches-scaler-index-a-new-benchmark-for-partner-performance.html"
+        },
+        {
+          "label": "Channelscaler SVP Product and SVP Sales appointments",
+          "url": "https://www.globenewswire.com/news-release/2026/09/30/3371972/0/en/channelscaler-appoints-new-product-and-sales-leaders-to-drive-next-phase-of-growth.html"
         }
       ]
     },
