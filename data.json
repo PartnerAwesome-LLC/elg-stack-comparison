@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-05T11:11:00-04:00",
+  "generated_at": "2026-11-02T09:57:00-05:00",
   "vendors": [
     {
       "vendor_name": "Crossbeam",
@@ -22,15 +22,21 @@
         "Databricks",
         "Glean (via Crossbeam MCP)",
         "Google Sheets (Offline Partners)",
-        "Superhuman (Crossbeam AI Connector)"
+        "Superhuman (Crossbeam AI Connector)",
+        "AWS Partner Central Lead Enrichment (early access)"
       ],
       "integration_count": "Not explicitly published; positioned as 'unlimited integrations' on Supernode/Enterprise tiers",
       "ecosystem_size": "~30,000 companies/GTM teams on the combined network post-Reveal merger",
       "last_funding_round": "Series C, $76M, October 26, 2021, led by Andreessen Horowitz",
       "total_funding": "~$116.85M across 4 rounds",
       "g2_rating": "4.8",
-      "g2_review_count": "414",
+      "g2_review_count": "417",
       "recent_features": [
+        {
+          "feature": "AWS Partner Central Lead Enrichment entered early access, importing enriched AWS partner leads into Crossbeam and associating them with the AWS Partner Central partner and AWS Enriched Leads population",
+          "date": "2026-10-15",
+          "source": "https://www.crossbeam.com/product-updates/your-aws-leads-finally-come-with-context-crossbeam-and-aws-partner-central-lead-enrichment"
+        },
         {
           "feature": "Crossbeam MCP and native AI connectors became generally available on all plans, including Free and Connector; AI access is metered through annual Crossbeam Credits (50–5,000 included by tier), with top-up packs available on Supernode and Enterprise",
           "date": "2026-09-01",
@@ -135,6 +141,14 @@
         {
           "label": "Crossbeam Credits FAQ",
           "url": "https://help.crossbeam.com/en/articles/15588582-crossbeam-credits-faq"
+        },
+        {
+          "label": "Crossbeam and AWS Partner Central Lead Enrichment update",
+          "url": "https://www.crossbeam.com/product-updates/your-aws-leads-finally-come-with-context-crossbeam-and-aws-partner-central-lead-enrichment"
+        },
+        {
+          "label": "Crossbeam AWS Lead Enrichment setup guide",
+          "url": "https://help.crossbeam.com/en/articles/17639563-aws-lead-enrichment-integration"
         }
       ]
     },
@@ -228,7 +242,7 @@
       "last_funding_round": "Series B, $29M CAD/USD, May 26, 2021 (some sources cite $35M CAD)",
       "total_funding": "~$38M (across Seed and Series A/B rounds)",
       "g2_rating": "4.7",
-      "g2_review_count": "946",
+      "g2_review_count": "953",
       "recent_features": [
         {
           "feature": "AppDirect acquired PartnerStack, combining PartnerStack's PRM and partner network with AppDirect subscription commerce and Tackle.io; AppDirect said programs, contacts, and the current PartnerStack experience would remain unchanged during integration",
@@ -328,8 +342,13 @@
       "last_funding_round": "$35M growth capital from CIBC Innovation Banking, May 2022",
       "total_funding": "~$113-145M (includes $50M growth round led by Brighton Park Capital, October 2021, plus $35M CIBC growth capital, 2022)",
       "g2_rating": "4.4",
-      "g2_review_count": "572",
+      "g2_review_count": "576",
       "recent_features": [
+        {
+          "feature": "Named a Leader in G2's Fall 2026 Enterprise PRM Grid and ranked No. 1 in Mid-Market Through-Channel Marketing; the announcement cites 4.5/5 across 554 Grid reviews and 91% Likelihood to Recommend",
+          "date": "2026-10-22",
+          "source": "https://impartner.com/resources/press-releases/impartner-named-a-leader-in-g2-s-enterprise-prm-grid-ranked-no-1-in-mid-market-through-channel-marketing"
+        },
         {
           "feature": "Expanded native CRM Sync for HubSpot announced, with reciprocal partner and CRM data synchronization and QuickStart templates",
           "date": "2026-06-30",
@@ -407,6 +426,10 @@
         {
           "label": "Impartner native HubSpot CRM Sync",
           "url": "https://www.businesswire.com/news/home/20260630824731/en/Impartner-Expands-PRM-Platform-with-Native-CRM-Sync-for-HubSpot"
+        },
+        {
+          "label": "Impartner G2 Fall 2026 Enterprise PRM Grid recognition",
+          "url": "https://impartner.com/resources/press-releases/impartner-named-a-leader-in-g2-s-enterprise-prm-grid-ranked-no-1-in-mid-market-through-channel-marketing"
         }
       ]
     },
@@ -553,7 +576,7 @@
       "last_funding_round": "$43M majority growth investment from Invictus Growth Partners, July 26, 2022",
       "total_funding": "~$43M (Invictus Growth Partners round; prior funding history not separately disclosed)",
       "g2_rating": "4.4 (listed under 'Channelscaler' on G2 following the 2025 Allbound/Channel Mechanics merger)",
-      "g2_review_count": "475",
+      "g2_review_count": "476",
       "recent_features": [
         {
           "feature": "Channelscaler appointed Rachel Fernandes SVP of Product and Jess Green SVP of Sales, citing an enterprise-growth phase and accelerated investment in AI, ecosystem intelligence, and a unified platform",
@@ -661,9 +684,9 @@
       "vendor_name": "WorkSpan",
       "category": "Co-sell orchestration",
       "website": "https://www.workspan.com/",
-      "pricing_public": "no",
-      "pricing_starting": "Not disclosed (contact sales); Vendr reports median annual spend around $48,000/yr",
-      "pricing_notes": "WorkSpan pricing is fully custom/quote-based across its Starter, Pro, Premium, and Enterprise tiers (per AWS Marketplace and G2 listings, both stating 'pricing provided by WorkSpan' / 'contact us'). Vendr benchmarking data suggests a median annual contract value in the ~$48,000/yr range for mid-size deployments. Source: https://www.g2.com/compare/unifyr-one-vs-workspan, https://www.g2.com/products/workspan/reviews",
+      "pricing_public": "partial (Playmaker is publicly priced; core WorkSpan Maestro/enterprise platform remains quote-based)",
+      "pricing_starting": "Playmaker Starter: $99/user/month (up to 3 partners); WorkSpan Maestro/core enterprise platform: custom quote",
+      "pricing_notes": "WorkSpan's public pricing is for Playmaker, a separate partner-revenue playbook product, not its core enterprise platform. As of October 16, 2026, USD monthly plans are Starter: $99/user/month for up to 3 partners; Grow: $249/user/month for up to 7 partners; Scale: $499/user/month for up to 13 partners. Playmaker includes a free partner assessment and the first 30 days to run plays at no charge; extra-partner fees are not stated. WorkSpan Maestro/core enterprise platform pricing remains custom and is not published. Source: https://www.workspan.com/playmaker/pricing",
       "key_integrations": [
         "AWS ACE (Partner Central)",
         "Microsoft Partner Center",
@@ -682,6 +705,11 @@
       "g2_rating": "4.3",
       "g2_review_count": "29",
       "recent_features": [
+        {
+          "feature": "WorkSpan published public pricing for Playmaker, a separate partner-revenue playbook product: Starter $99, Grow $249, and Scale $499 per user/month; first 30 days are free. Core WorkSpan Maestro/enterprise pricing remains custom",
+          "date": "2026-10-16",
+          "source": "https://www.workspan.com/playmaker/pricing"
+        },
         {
           "feature": "WorkSpan and Work4Flow launched WorkSpan.AI on the ServiceNow Store, bringing AI-powered partner intelligence and co-selling into ServiceNow CRM",
           "date": "2026-01-21",
@@ -732,6 +760,10 @@
         {
           "label": "WorkSpan and Work4Flow ServiceNow launch",
           "url": "https://www.prnewswire.com/news-releases/workspan-and-work4flow-launch-crm-partner-ecosystem-management-302666619.html"
+        },
+        {
+          "label": "WorkSpan Playmaker public pricing",
+          "url": "https://www.workspan.com/playmaker/pricing"
         }
       ]
     },
